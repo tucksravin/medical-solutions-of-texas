@@ -175,7 +175,7 @@ onMount(() => {
 				{/if}
 				
 			{:else}
-				<h1 class="text-mid  mb-12 opacity-50">Connecting <br/> DoD + VA <br/> Hospitals <br/> w/ Med-Surg <br/> Suppliers</h1>
+				<h1 class="text-mid  mb-12 opacity-60">Connecting <br/> DoD + VA <br/> Hospitals <br/> w/ Med-Surg <br/> Suppliers</h1>
 				<div class="text-white transition-opacity duration-1000 ease-out  {showSubtitle? "opacity-100":"opacity-0"}">We bridge the gap between clinical demand and government procurement to support America’s Armed Services and our Veterans.</div>
 			{/if}
 		</div>
