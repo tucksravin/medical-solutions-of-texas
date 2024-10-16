@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
     import linkArrow from "$lib/assets/icons/wireframe-link-arrow-right.svg"
     export let text = "";
     export let href ="#"
