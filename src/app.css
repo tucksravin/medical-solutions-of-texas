@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    font-family: "Helvetica Neue LT Std", "helvetica", sans-serif;
+    font-family: "rigid-square", "helvetica", sans-serif;
     transition-property: all;
     transition-timing-function: cubic-bezier(.5,0,0,1);
     transition-duration: 500ms;
@@ -11,13 +11,25 @@ body{
     overflow-x: clip;
     scrollbar-width: none !important;
     overflow-y: auto;
+    font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 22.4px */
+background-color: #140F09;
 }
 
 body::-webkit-scrollbar { 
-    display: none !important;  /* Safari and Chrome */
+    display: none !important;
+    width: 0 !important;   /* Safari and Chrome */
 }
-body::-webkit-scrollbar {
-    width: 0 !important;  /* Remove scrollbar space */  /* Optional: just make scrollbar invisible */
+
+.hide-scrollbar{
+    scrollbar-width: none !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+    width: 0 !important; 
+    display: none !important;
 }
 
 .bump, .negative-bump{
@@ -67,123 +79,138 @@ button{
     cursor: pointer;
 }
 
+.button-text{
+    font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.nav-text{
+    font-family: "barlow-condensed";
+    font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #998B6A;
+}
+
 h1{
-    font-size: 66px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 80px; /* 121.212% */
+
+font-family: "barlow-condensed";
+font-size: 140px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 177.6px */
+text-transform: uppercase;
 }
 
 h2{
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 64px; /* 128% */
+
+font-size: 80px;
+font-style: normal;
+font-weight: 300;
+line-height: 120%; /* 96px */
+text-transform: uppercase;
 }
 
 h3{
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 48px; 
+    font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 133.333% */
+text-transform: uppercase;
 }
 
 h4{
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 38px; /* 135.714% */
+    font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 28px */
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
 h5{
-   font-size: 1.5rem; 
-   line-height: 1.5em;
-}
-
-h6{
-    font-size: 14px;
+    font-size: 15px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 24px; /* 171.429% */
+    font-weight: 600;
+    line-height: 140%; /* 21px */
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
+
 p{
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
+    font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 133.333% */
 }
 
 .label{
-    font-family: "helvetica";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 150% */
-}
-
-button{
-    cursor: pointer;
-}
-
-a{
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height:1em;
-    color:#424B5A;
+    line-height: 20px; 
 }
 
-@media only screen and (max-width:786px) {
+
+@media only screen and (max-width:1340px) {
     h1{
-        font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 44px; /* 121.212% */
+        font-size:110px;
+    }
+
+}
+
+@media only screen and (max-width:1024px) {
+    h1{
+        font-size:82px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+    h1{
+       font-size:60px
     }
     
     h2{
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 42px;
+        
     }
     
     h3{
-        font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px;
+        
     }
     
     h4{
-        font-size: 2rem;
-        line-height: 1.4em;
+        
     }
     
     h5{
-       font-size: 1.5rem; 
-       line-height: 1.5em;
+       
     }
     
     
     p{
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
+       
     }
     
 
-    
-    a{
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 0px 0px 8.5px 0px;
+
 }
+
+@media only screen and (max-width:560px) {
+    h1{
+        font-size: 50px;
+    }
+
 }
 
 /* svelte-select stylings*/
