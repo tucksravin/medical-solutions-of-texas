@@ -66,7 +66,7 @@ onMount(() => {
 
 <svelte:window bind:innerWidth={viewportWidth} />
 
-<ScreenWidthImage class="overflow-y-scroll hide-scrollbar" src={soldiersVideoPlaceholder}>
+<ScreenWidthImage class="overflow-y-scroll hide-scrollbar" src={soldiersVideoPlaceholder} vimeoId="1019997263">
 	<div class="h-[200%]"> 
 		<div class="w-full h-screen">
 			{#if isMounted}
