@@ -155,9 +155,14 @@ onMount(() => {
 });
 
 
+export let data:any;
 </script>
 
+<svelte:head><title>{data.title} </title></svelte:head>
+
 <svelte:window bind:innerWidth={viewportWidth} bind:innerHeight={viewportHeight}/>
+
+
 
 <ScreenWidthImage class="fixed -z-10" src={soldiersVideoPlaceholder} vimeoId="1019997263" darken backdrop>
 	
@@ -225,7 +230,7 @@ onMount(() => {
 		</div>
 		<div class="mt-6 overflow-hidden" >
 		<div class="mt-6 overflow-hidden" bind:this={weGetTrigger}>
-			<div class="transition-transform duration-1000 ease-out -mb-[15%]" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
+			<div class="transition-transform transform-gpu duration-1000 ease-out -mb-[15%]" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===0 ? "":"opacity-25"}">Priority <br/> Access</h2>
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===1 ? "":"opacity-25"}">contract <br/> expertise</h2>
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===2 ? "":"opacity-25"}">Direct <br/> Results</h2>
