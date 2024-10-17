@@ -142,7 +142,7 @@ onMount(() => {
 
 	setTimeout(()=>{
 		showSubtitle = true;
-	}, 1400)
+	}, 3400)
 
 
 
