@@ -31,6 +31,7 @@ let viewportWidth:number;
 let viewportHeight:number;
 
 let isMounted = false;
+let showIntro = true;
 let showSubtitle = false;
 
 let middleTitleLine:HTMLElement |  null;
@@ -137,6 +138,7 @@ onMount(() => {
 	setTimeout(()=>{
 		handleResize()
 	}, 20)
+
 
 	setTimeout(()=>{
 		showSubtitle = true;
