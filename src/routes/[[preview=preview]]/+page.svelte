@@ -78,9 +78,11 @@ const handleResize = () => {
 
 const handleScroll = () => {
 	if(weGetTrigger){
-		const weGetBottom = weGetTrigger.getBoundingClientRect().bottom
+		const weGetRect = weGetTrigger.getBoundingClientRect();
+		const weGetBottom = weGetRect.bottom
+		const weGetHeight = weGetRect.height
 
-		if(weGetBottom<viewportHeight){
+		if(weGetBottom<viewportHeight + (weGetHeight/3)){
 			runWeGetAnimation()
 		}else{
 			runReverseWeGetAnimation()
@@ -98,9 +100,11 @@ const handleScroll = () => {
 	}
 
 	if(threeStepTrigger){
-		const threeStepBottom =threeStepTrigger.getBoundingClientRect().bottom
+		const threeStepRect = threeStepTrigger.getBoundingClientRect()
+		const threeStepBottom =threeStepRect.bottom
+		const threeStepHeight =threeStepRect.height
 
-		if(threeStepBottom<viewportHeight){
+		if(threeStepBottom<viewportHeight + (threeStepHeight/2)){
 			isthreeStepActive=true;
 		}else{
 			isthreeStepActive=false;
@@ -194,7 +198,7 @@ onMount(() => {
 				<img src={sdvosbLogo} alt="service disabled veteran owned small business logo" />
 				<img src={txFlag} alt="texas flag" class="opacity-50"/>
 			</div>
-			<p class="text-white text-center text-[24px]">Our expertise, SDVOSB (Service Disabled Veteran Owned Small Business) status, and deep network of relationships allows us to offer solutions where others hit roadblocks.</p>
+			<div class="text-white text-center leading-normal md:text-[24px]">Our expertise, SDVOSB (Service Disabled Veteran Owned Small Business) status, and deep network of relationships allows us to offer solutions where others hit roadblocks.</div>
 			<div class="flex flex-col md:flex-row justify-center items-center gap-8">
 				<BracketButton href="/" class="text-mid button-text">Contact Us</BracketButton>
 				<BracketButton href="/" class="text-mid button-text">Capabilities Statement</BracketButton>
@@ -215,18 +219,19 @@ onMount(() => {
 					frameborder="0"
 					
 				  ></iframe>
-				  <h2 class="text-mid absolute -bottom-[14px] left-0 leading-none">We'll Get You</h2>
+				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">We'll Get You</h2>
 		</div>
 		<div class="mt-6 overflow-hidden" >
 		<div class="mt-6 overflow-hidden" bind:this={weGetTrigger}>
-			<div class="transition-transform duration-1000 ease-out" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
-				<h2 class="text-dark text-left transition duration-1000 ease-out {weGetIndex===0 ? "":"opacity-25"}">Priority Access</h2>
-				<h2 class="text-dark text-left transition duration-1000 ease-out {weGetIndex===1 ? "":"opacity-25"}">contract expertise</h2>
-				<h2 class="text-dark text-left transition duration-1000 ease-out {weGetIndex===2 ? "":"opacity-25"}">Direct Results</h2>
+			<div class="transition-transform duration-1000 ease-out -mb-[15%]" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
+				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===0 ? "":"opacity-25"}">Priority <br/> Access</h2>
+				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===1 ? "":"opacity-25"}">contract <br/> expertise</h2>
+				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===2 ? "":"opacity-25"}">Direct <br/> Results</h2>
 			</div>
-		
-			<h5 class="text-dark mt-36 mb-5">The End User In Mind</h5>
+		<div class="bg-mid relative pt-4 w-full">
+			<h5 class="text-dark mt-20 md:mt-36 mb-5">The End User In Mind</h5>
 			<div class="text-dark w-80">MSOT makes medical care possible from the war fighter all the way to the retiree and all phases of service inbetween.</div>
+		</div>
 	</ContentWidth>
 </section>
 <section class="bg-light w-screen aspect-[5/2] relative">
@@ -245,7 +250,7 @@ onMount(() => {
 			<div class="duration-1000 ease-out {isPainActive?"opacity-25 delay-[2800ms]":""}">
 				<h4 class="text-dark mb-20 duration-1000 ease-out {isPainActive?"opacity-100":""}">We Know Your Pain </h4>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100":"opacity-0"}">government <br/> contracts are</h3>
-				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-700":"opacity-0"}">opaque</h3>
+				<h3 class="text-dark duration-1000 ease-out mt-6  {isPainActive?"opacity-100 delay-700":"opacity-0"}">opaque</h3>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1400ms]":"opacity-0"}">confusing</h3>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[2100ms]":"opacity-0"}">inaccessible</h3>
 			</div>
@@ -253,7 +258,7 @@ onMount(() => {
 		<div class="md:w-1/2 mt-6">
 			<h4 class="text-dark mb-20  duration-1000 ease-out {isPainActive?"opacity-100 delay-[3500ms]":"opacity-0"}">We Know What To Do</h4>
 			<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[3500ms]":"opacity-0"}">with us <br/> You’ll get</h3>
-			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100 delay-[4200ms]":"opacity-0"}">transparency</h3>
+			<h3 class="text-dark duration-1000 ease-out mt-6 {isPainActive?"opacity-100 delay-[4200ms]":"opacity-0"}">transparency</h3>
 			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100 delay-[4900ms] ":"opacity-0"}">understanding</h3>
 			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100  delay-[5600ms]  ":"opacity-0"}">access</h3>
 		</div>
