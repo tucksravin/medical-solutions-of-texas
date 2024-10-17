@@ -96,7 +96,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
 			>		
-				<a href="/" class="bump w-fit relative}"><img class="h-full transition duration-[1000ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class="bump w-fit relative}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{/if}
