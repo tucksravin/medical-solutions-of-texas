@@ -45,7 +45,7 @@
 
 	setTimeout(()=>{
 		isTransitioning = false;
-	}, 1200)
+	}, 2400)
   })
 
   onNavigate(()=>{
