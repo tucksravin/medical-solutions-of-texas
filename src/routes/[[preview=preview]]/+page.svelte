@@ -9,6 +9,7 @@ import revogenLogo from "$lib/assets/icons/logos/revogenLogo.png"
 import soldiersVideoPlaceholder from "$lib/assets/images/home/bgVideoPlaceholder.jpg"
 import surgeonsVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.png"
 import timeline1 from "$lib/assets/images/home/timeLine.svg"
+import timeline1_mobile from "$lib/assets/images/home/timeline1_mobile.svg"
 import timeline2 from "$lib/assets/images/home/timeline2.svg"
 import timeline3 from "$lib/assets/images/home/timeline3.svg"
 import ctaImage from "$lib/assets/images/home/doctor.png"
@@ -229,7 +230,7 @@ onMount(() => {
 	</ContentWidth>
 </section>
 <section class="bg-light w-screen aspect-[5/2] relative">
-	<img src={timeline1} alt="timelines" class="w-full" />
+	<img src={viewportWidth>768 ? timeline1 : timeline1_mobile} alt="timelines" class="w-full" />
 </section>
 <section class="bg-mid py-20" bind:this={painTrigger}>
 	<ContentWidth class="flex flex-col md:flex-row relative">
