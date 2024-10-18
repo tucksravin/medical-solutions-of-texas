@@ -288,14 +288,10 @@ export let data:any;
 		<div class="w-full py-32 sm:py-32 lg:px-40 border-[#998B6A] border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-10 mb-12">
 			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-[#998B6A] border-t-[6px]" />
 			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-[#998B6A] border-t-[6px]" />
-			<h4 class="text-dark absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Our Partners</h4>
-
-				
-				<img src={revogenLogo} alt="service disabled veteran owned small business logo" class="h-32"/>
-				
+			<h4 class="text-dark absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Our Partner</h4>
 			
-			<p class="text-dark text-center text-[24px]">MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.</p>
-			
+			<p class="text-dark text-center text-[24px]">“MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.”</p>
+			<img src={revogenLogo} alt="service disabled veteran owned small business logo" class="h-32"/>
 		</div>
 	</div>
 
@@ -307,17 +303,17 @@ export let data:any;
 		<h2 class="text-dark text-left w-full">is simple with msot</h2>
 		<div class="w-full my-24 flex flex-col md:flex-row justify-between gap-8">
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100":"opacity-0"}">
-				<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full" />
+				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full" />
 				<h4 class="text-dark mt-4">01</h4>
 				<h3 class="text-dark mt-8">establish <br/>	goals</h3>
 			</div>
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100 delay-[800ms]":"opacity-0"}">
-				<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full" />
+				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full" />
 				<h4 class="text-dark mt-4">02</h4>
 				<h3 class="text-dark mt-8">Find Your <br/> access points</h3>
 			</div>
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100 delay-[1800ms]":"opacity-0"}">
-				<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full" />
+				<div class="absolute top-0 left-0 h-[2px] bg-dark w-full" />
 				<h4 class="text-dark mt-4">03</h4>
 				<h3 class="text-dark mt-8">Set pricing <br/>direct invoicing</h3>
 
