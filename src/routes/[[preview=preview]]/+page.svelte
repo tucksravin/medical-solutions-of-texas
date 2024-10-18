@@ -11,7 +11,9 @@ import surgeonsVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholde
 import timeline1 from "$lib/assets/images/home/timeLine.svg"
 import timeline1_mobile from "$lib/assets/images/home/timeline1_mobile.svg"
 import timeline2 from "$lib/assets/images/home/timeline2.svg"
+import timeline2_mobile from "$lib/assets/images/home/timeline2_mobile.svg"
 import timeline3 from "$lib/assets/images/home/timeline3.svg"
+import timeline3_mobile from "$lib/assets/images/home/timeline3_mobile.svg"
 import ctaImage from "$lib/assets/images/home/doctor.png"
 
   
@@ -278,7 +280,7 @@ export let data:any;
 </section>
 
 <section class="bg-light w-screen aspect-[5/2] relative">
-	<img src={timeline2} alt="timelines" class="w-full" />
+	<img src={viewportWidth>768 ? timeline2 : timeline2_mobile} alt="timelines" class="w-full" />
 </section>
 <section class="bg-mid py-32">
 	<ContentWidth>
@@ -325,7 +327,7 @@ export let data:any;
 	</ContentWidth>
 </section>
 <section class="bg-light w-screen aspect-[5/2] relative">
-	<img src={timeline3} alt="timelines" class="w-full" />
+	<img src={viewportWidth>768 ? timeline3 : timeline3_mobile} alt="timelines" class="w-full" />
 	
 </section>
 <ScreenWidthImage src={ctaImage} class="flex flex-col items-start justify-end py-32" darken>
