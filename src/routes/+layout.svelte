@@ -38,10 +38,30 @@
 
     ];
 
+	let main:HTMLElement | null;
+	let isScrolledToTop = true;
+
+	const handleScroll = () =>{
+		if(main){
+			if(main.getBoundingClientRect().top<0){
+				isScrolledToTop = false;
+			}else{
+				isScrolledToTop = true;
+			}
+			console.log("scrolled " + main.getBoundingClientRect().top)
+		}
+		
+	}
+
+
   let isMounted = false;
   let isTransitioning = true;
+
+
   onMount(()=>{
 	isMounted = true;
+
+	window.addEventListener('scroll', handleScroll)
 
 	setTimeout(()=>{
 		isTransitioning = false;
@@ -79,6 +99,7 @@
 {#if isTransitioning}
 	<div class="bg-[#140F09] z-40 fixed w-screen h-screen top-0 left-0" out:fade={{duration:700, delay:350}} ></div>
 {/if}
+
 	{#if viewportWidth<1550}
 		<OnMount>
 			<div 
@@ -86,7 +107,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(4vw)"}
 			>		
-				<a href="/" class="bump w-fit relative "><img class="h-full {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-700 ease-in {!isScrolledToTop&&!isTransitioning?"md:-translate-y-[112px]":""}"><img class="h-full {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{:else}
@@ -96,11 +117,11 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
 			>		
-				<a href="/" class="bump w-fit relative}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-700 ease-in {!isScrolledToTop&&!isTransitioning?"md:-translate-y-[112px]":""}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{/if}
-		
+	
 	
 {#if isOverlayVisible}
 <div class="w-screen h-screen fixed bg-dark z-30" transition:fly={{y:"-100%"}}>
@@ -119,12 +140,12 @@
 </div>
 {/if}
 
-<main>
-	<nav class="nav-text fixed top-0 w-full h-28 py-4 z-20">
+<main bind:this={main}>
+	<nav class="nav-text fixed top-0 w-full h-28 py-4 z-20 transition duration-700 ease-in {isScrolledToTop?"":"md:-translate-y-full"}">
 		<ContentWidth class="h-full flex flex-row justify-between items-center">
 		<div/>
 			{#if viewportWidth>768}
-			<div class="hidden md:flex flex-row items-center justify-between gap-12">
+			<div class="flex flex-row items-center justify-between gap-12 transition-transform ">
 				{#each NAV_LINKS as item}
 					<a href={item.href}>{item.label}</a>
 				{/each}
@@ -134,8 +155,9 @@
 			{/if}
 		</ContentWidth>
 	</nav>
-	
+
 	<slot />
+
 	<footer class=" h-56 md:h-48 py-6 bg-[#140F09]">
 		<ContentWidth class="flex flex-row justify-between h-36 sm:h-full">
 			<div class="flex flex-col justify-between items-start">
