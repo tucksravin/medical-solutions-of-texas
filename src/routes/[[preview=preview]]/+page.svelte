@@ -196,7 +196,7 @@ export let data:any;
 		{/if}
 		
 	</div>
-	<div class="w-full flex justify-center items-center">
+	<div class="w-full flex justify-center items-center mt-52 mb-40">
 		<div class="w-full p-6 sm:p-12  lg:px-40 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-10 mb-12">
 			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
@@ -230,7 +230,7 @@ export let data:any;
 				  ></iframe>
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">We'll Get You</h2>
 		</div>
-		<div class="mt-6 overflow-hidden" >
+		<div class="-mt-6 overflow-hidden" >
 		<div class="mt-6 overflow-hidden" bind:this={weGetTrigger}>
 			<div class="transition-transform transform-gpu duration-1000 ease-out -mb-[15%]" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===0 ? "":"opacity-25"}">Priority <br/> Access</h2>
@@ -249,27 +249,27 @@ export let data:any;
 <section class="bg-mid py-20" bind:this={painTrigger}>
 	<ContentWidth class="flex flex-col md:flex-row relative">
 		{#if !isPainActive}
-			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full" transition:fade={{duration:6000}} />
+			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full" transition:fade={{duration:3000}} />
 		{/if}
 	
 		{#if isPainActive}
-			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-transparent to-dark  w-full" transition:fade={{duration:6000}} />
+			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-transparent to-dark  w-full" transition:fade={{duration:3000}} />
 		{/if}
 		<div class="md:w-1/2 mt-6 transition-opacity duration-1000 ease-out {isPainActive?"":"opacity-0"}">
-			<div class="duration-1000 ease-out {isPainActive?"opacity-25 delay-[2800ms]":""}">
+			<div class="duration-1000 ease-out {isPainActive?"opacity-25 delay-[1400ms]":""}">
 				<h4 class="text-dark mb-20 duration-1000 ease-out {isPainActive?"opacity-100":""}">We Know Your Pain </h4>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100":"opacity-0"}">government <br/> contracts are</h3>
-				<h3 class="text-dark duration-1000 ease-out mt-6  {isPainActive?"opacity-100 delay-700":"opacity-0"}">opaque</h3>
-				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1400ms]":"opacity-0"}">confusing</h3>
-				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[2100ms]":"opacity-0"}">inaccessible</h3>
+				<h3 class="text-dark duration-1000 ease-out mt-6  {isPainActive?"opacity-100 delay-[350ms]":"opacity-0"}">opaque</h3>
+				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[700ms]":"opacity-0"}">confusing</h3>
+				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1050ms]":"opacity-0"}">inaccessible</h3>
 			</div>
 		</div>
 		<div class="md:w-1/2 mt-6">
-			<h4 class="text-dark mb-20  duration-1000 ease-out {isPainActive?"opacity-100 delay-[3500ms]":"opacity-0"}">We Know What To Do</h4>
-			<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[3500ms]":"opacity-0"}">with us <br/> You’ll get</h3>
-			<h3 class="text-dark duration-1000 ease-out mt-6 {isPainActive?"opacity-100 delay-[4200ms]":"opacity-0"}">transparency</h3>
-			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100 delay-[4900ms] ":"opacity-0"}">understanding</h3>
-			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100  delay-[5600ms]  ":"opacity-0"}">access</h3>
+			<h4 class="text-dark mb-20  duration-1000 ease-out {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">We Know What To Do</h4>
+			<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">with us <br/> You’ll get</h3>
+			<h3 class="text-dark duration-1000 ease-out mt-6 {isPainActive?"opacity-100 delay-[2100ms]":"opacity-0"}">transparency</h3>
+			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100 delay-[2450ms] ":"opacity-0"}">understanding</h3>
+			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100  delay-[2800ms]  ":"opacity-0"}">access</h3>
 		</div>
 		
 	</ContentWidth>
