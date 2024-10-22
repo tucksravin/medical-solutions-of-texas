@@ -44,18 +44,24 @@ let weGetIndex = 0;
 
 let weGetTrigger:HTMLElement | null;
 
+let weGetRunning = false;
+
 const runWeGetAnimation = () => {
-	if(weGetIndex!=2){
-		weGetIndex=1;
-		setTimeout(()=>weGetIndex=2,1600)
+	if(weGetIndex!=2&&!weGetRunning){
+		weGetRunning = true;
+		setTimeout(()=>weGetIndex=1,1600)
+		setTimeout(()=>weGetIndex=2,3200)
+		setTimeout(()=>weGetRunning=false, 4800)
 	}
 }
 
 const runReverseWeGetAnimation = () => {
 
-	if(weGetIndex!=0){
-		weGetIndex=1;
-		setTimeout(()=>weGetIndex=0,1600)
+	if(weGetIndex!=0&&!weGetRunning){
+		weGetRunning = true;
+		setTimeout(()=>weGetIndex=1,1600)
+		setTimeout(()=>weGetIndex=0,3200)
+		setTimeout(()=>weGetRunning=false, 4800)
 	}
 }
 
@@ -230,13 +236,20 @@ export let data:any;
 		</div>
 		<div class="-mt-6 overflow-hidden" >
 		<div class="mt-6 overflow-hidden" bind:this={weGetTrigger}>
-			<div class="transition-transform transform-gpu duration-1000 ease-out -mb-[15%]" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
+			<div class="transition-transform transform-gpu duration-1000 ease-out -mb-[15%] lg:-mb-[8%]" style={`transform:translateY(calc(-1/3 * 100% * ${weGetIndex}))`}>
+				{#if viewportWidth>1024}
+				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===0 ? "":"opacity-25"}">Priority Access</h2>
+				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===1 ? "":"opacity-25"}">contract expertise</h2>
+				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===2 ? "":"opacity-25"}">Direct Results</h2>
+				{:else }
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===0 ? "":"opacity-25"}">Priority <br/> Access</h2>
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===1 ? "":"opacity-25"}">contract <br/> expertise</h2>
 				<h2 class="text-dark text-left transition duration-1000 ease-out mt-4 {weGetIndex===2 ? "":"opacity-25"}">Direct <br/> Results</h2>
+				{/if}
+
 			</div>
 		<div class="bg-mid relative pt-4 w-full">
-			<h5 class="text-dark mt-20 md:mt-36 mb-5">The End User In Mind</h5>
+			<h5 class="text-dark mt-20 lg:mt-24 mb-5">The End User In Mind</h5>
 			<div class="text-dark w-80">MSOT makes medical care possible from the war fighter all the way to the retiree and all phases of service inbetween.</div>
 		</div>
 	</ContentWidth>
