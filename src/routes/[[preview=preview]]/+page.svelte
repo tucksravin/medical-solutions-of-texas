@@ -14,7 +14,7 @@ import timeline2 from "$lib/assets/images/home/timeline2.svg"
 import timeline2_mobile from "$lib/assets/images/home/timeline2_mobile.svg"
 import timeline3 from "$lib/assets/images/home/timeline3.svg"
 import timeline3_mobile from "$lib/assets/images/home/timeline3_mobile.svg"
-import ctaImage from "$lib/assets/images/home/doctor.png"
+import ctaImage from "$lib/assets/images/home/doctor.jpg"
 
   
 //components
