@@ -43,7 +43,7 @@
 
 	const handleScroll = () =>{
 		if(main){
-			if(main.getBoundingClientRect().top<0){
+			if(main.getBoundingClientRect().top<-100){
 				isScrolledToTop = false;
 			}else{
 				isScrolledToTop = true;
