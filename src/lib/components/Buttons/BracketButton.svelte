@@ -9,6 +9,12 @@
     let isActive=false;
 
 </script>
+<style>
+    a:hover{
+        color: rgb(83 68 34 / var(--tw-text-opacity));
+    }
+</style>
+
 
 {#if href}
 <a 
