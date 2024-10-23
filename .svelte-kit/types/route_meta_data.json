@@ -14,6 +14,9 @@
 	"/contacts": [
 		"src/routes/+layout.server.js"
 	],
+	"/[[preview=preview]]/contact": [
+		"src/routes/+layout.server.js"
+	],
 	"/content": [
 		"src/routes/+layout.server.js"
 	],
@@ -35,10 +38,16 @@
 	"/navs": [
 		"src/routes/+layout.server.js"
 	],
+	"/[[preview=preview]]/partners": [
+		"src/routes/+layout.server.js"
+	],
 	"/plans": [
 		"src/routes/+layout.server.js"
 	],
 	"/portfolios": [
+		"src/routes/+layout.server.js"
+	],
+	"/[[preview=preview]]/process": [
 		"src/routes/+layout.server.js"
 	],
 	"/slice-simulator": [

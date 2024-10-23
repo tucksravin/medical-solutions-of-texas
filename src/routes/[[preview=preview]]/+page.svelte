@@ -180,9 +180,9 @@ export let data:any;
 
 
 
-<ScreenWidthImage class="fixed -z-10" src={soldiersVideoPlaceholder} vimeoId="1019997263" darken backdrop>
+<ScreenWidthImage class="fixed -z-10" src={soldiersVideoPlaceholder} vimeoId="1019997263" darken backdrop />
 	
-</ScreenWidthImage>
+
 
 	<div class="w-full h-screen">
 		{#if isMounted}
@@ -207,7 +207,7 @@ export let data:any;
 		{/if}
 		
 	</div>
-	<ContentWidth>
+<ContentWidth>
 	<div class="w-full flex justify-center items-center mt-52 mb-40">
 		<div class="w-full p-6 sm:p-12  lg:px-40 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-10 mb-12">
 			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
