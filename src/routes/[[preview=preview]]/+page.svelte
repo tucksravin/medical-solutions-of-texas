@@ -15,6 +15,7 @@ import timeline2_mobile from "$lib/assets/images/home/timeline2_mobile.svg"
 import timeline3 from "$lib/assets/images/home/timeline3.svg"
 import timeline3_mobile from "$lib/assets/images/home/timeline3_mobile.svg"
 import ctaImage from "$lib/assets/images/home/doctor.jpg"
+import ctaImageMobile from "$lib/assets/images/home/doctor_mobile.jpg"
 
   
 //components
@@ -166,6 +167,13 @@ onMount(() => {
 export let data:any;
 </script>
 
+<style>
+	.bg-darken-gradient{
+		background: linear-gradient(180deg, rgba(203, 195, 164, 0.20) 33.5%, #656F5C15 100%);
+		background-blend-mode: multiply;
+	}
+</style>
+
 <svelte:head><title>{data.title} </title></svelte:head>
 
 <svelte:window bind:innerWidth={viewportWidth} bind:innerHeight={viewportHeight}/>
@@ -232,6 +240,7 @@ export let data:any;
 					frameborder="0"
 					
 				  ></iframe>
+				  <div class="w-full h-full absolute top-0 left-0 bg-darken-gradient"/>
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">We'll Get You</h2>
 		</div>
 		<div class="-mt-6 overflow-hidden" >
@@ -337,7 +346,7 @@ export let data:any;
 	<img src={viewportWidth>768 ? timeline3 : timeline3_mobile} alt="timelines" class="w-full" />
 	
 </section>
-<ScreenWidthImage src={ctaImage} class="flex flex-col items-start justify-end py-32" darken>
+<ScreenWidthImage src={viewportWidth<1024?ctaImageMobile:ctaImage} class="flex flex-col items-start justify-end py-32" darken>
 	<div class="h-44 overflow-hidden relative w-full">
 	
 			<h1 class=" text-mid add-outline absolute bottom-0 left-0 opacity-40">let’s get started</h1>
