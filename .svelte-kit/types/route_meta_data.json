@@ -3,6 +3,7 @@
 		"src/routes/+layout.server.js"
 	],
 	"/[[preview=preview]]/about": [
+		"src/routes/[[preview=preview]]/about/+page.server.js",
 		"src/routes/+layout.server.js"
 	],
 	"/api/preview": [
@@ -15,6 +16,7 @@
 		"src/routes/+layout.server.js"
 	],
 	"/[[preview=preview]]/contact": [
+		"src/routes/[[preview=preview]]/contact/+page.server.js",
 		"src/routes/+layout.server.js"
 	],
 	"/content": [
@@ -39,6 +41,7 @@
 		"src/routes/+layout.server.js"
 	],
 	"/[[preview=preview]]/partners": [
+		"src/routes/[[preview=preview]]/partners/+page.server.js",
 		"src/routes/+layout.server.js"
 	],
 	"/plans": [
@@ -48,6 +51,7 @@
 		"src/routes/+layout.server.js"
 	],
 	"/[[preview=preview]]/process": [
+		"src/routes/[[preview=preview]]/process/+page.server.js",
 		"src/routes/+layout.server.js"
 	],
 	"/slice-simulator": [

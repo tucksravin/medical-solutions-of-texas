@@ -9,7 +9,7 @@
 	import "../app.css";
   import ContentWidth from '$lib/components/ContentWidth/ContentWidth.svelte';
   import { onMount } from 'svelte';
-  import OnMount from '$lib/components/OnMount.svelte';
+  import OnMount from '$lib/components/TriggerTransitionOnMount.svelte';
   import { onNavigate } from '$app/navigation';
 
   let isOverlayVisible = false;

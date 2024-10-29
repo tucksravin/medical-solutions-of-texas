@@ -30,10 +30,10 @@ export const nodes = [
 export const server_loads = [0];
 
 export const dictionary = {
-		"/[[preview=preview]]/about": [4],
+		"/[[preview=preview]]/about": [~4],
 		"/blogs": [8],
 		"/contacts": [9],
-		"/[[preview=preview]]/contact": [5],
+		"/[[preview=preview]]/contact": [~5],
 		"/content": [10],
 		"/ctas": [11],
 		"/faqs": [12],
@@ -41,10 +41,10 @@ export const dictionary = {
 		"/lists": [14],
 		"/mastheads": [15],
 		"/navs": [16],
-		"/[[preview=preview]]/partners": [6],
+		"/[[preview=preview]]/partners": [~6],
 		"/plans": [17],
 		"/portfolios": [18],
-		"/[[preview=preview]]/process": [7],
+		"/[[preview=preview]]/process": [~7],
 		"/slice-simulator": [19],
 		"/sliders": [20],
 		"/teams": [21],

@@ -100,9 +100,10 @@ const handleScroll = () => {
 	}
 
 	if(painTrigger){
-		const painBottom =painTrigger.getBoundingClientRect().bottom
+		const painRect = painTrigger.getBoundingClientRect()
+	
 
-		if(painBottom<viewportHeight){
+		if((painRect.bottom<viewportHeight&&viewportWidth>1024)||(painRect.top<viewportHeight&&viewportWidth<=1024)){
 			isPainActive=true;
 		}else{
 			isPainActive=false;
