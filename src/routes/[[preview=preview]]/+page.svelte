@@ -4,11 +4,12 @@ import usFlag from "$lib/assets/icons/logos/usFlag.svg"
 import txFlag from "$lib/assets/icons/logos/txFlag.svg"
 import sdvosbLogo from "$lib/assets/icons/logos/sdvosb-white.svg";
 import revogenLogo from "$lib/assets/icons/logos/revogenLogo.png" 
+import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
 
 //images
 import soldiersVideoPlaceholder from "$lib/assets/images/home/bgVideoPlaceholder.jpg"
 import surgeonsVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.png"
-import timeline1 from "$lib/assets/images/home/timeLine.svg"
+import timeline1 from "$lib/assets/images/home/timeline1.svg"
 import timeline1_mobile from "$lib/assets/images/home/timeline1_mobile.svg"
 import timeline2 from "$lib/assets/images/home/timeline2.svg"
 import timeline2_mobile from "$lib/assets/images/home/timeline2_mobile.svg"
@@ -360,3 +361,19 @@ export let data:any;
 		<BracketButton class="text-mid" href="/">Learn More</BracketButton>
 	</div>
 </ScreenWidthImage>
+
+<footer class=" h-56 md:h-48 py-6 bg-[#140F09]">
+	<ContentWidth class="flex flex-row justify-between h-36 sm:h-full">
+		<div class="flex flex-col justify-between items-start">
+			<a href="/" class="bump self-start h-20 relative"><img class="h-full transitionn duration-700 ease-fast-slow delay-500" src={msotLogo} style="transform-origin:top left" alt="msot logo"/></a>
+			{#if viewportWidth > 560}
+			<div class="label text-white ">©2024 - Medical Solutions of Texas  |   All Rights Reserved</div>
+			{/if}
+		
+		</div>
+		<img src={sdvosbLogo} alt="sdvosb logo" class="h-24"/>
+	</ContentWidth>
+	{#if viewportWidth <= 560}
+			<div class="label text-white w-full text-center px-2">©2024 - Medical Solutions of Texas  <br />   All Rights Reserved</div>
+	{/if}
+</footer>

@@ -172,20 +172,6 @@
 
 	<slot />
 
-	<footer class=" h-56 md:h-48 py-6 bg-[#140F09]">
-		<ContentWidth class="flex flex-row justify-between h-36 sm:h-full">
-			<div class="flex flex-col justify-between items-start">
-				<a href="/" class="bump self-start h-20 relative"><img class="h-full transitionn duration-700 ease-fast-slow delay-500" src={msotLogo} style="transform-origin:top left" alt="msot logo"/></a>
-				{#if viewportWidth > 560}
-				<div class="label text-white ">©2024 - Medical Solutions of Texas  |   All Rights Reserved</div>
-				{/if}
-			
-			</div>
-			<img src={sdvosbLogo} alt="sdvosb logo" class="h-24"/>
-		</ContentWidth>
-		{#if viewportWidth <= 560}
-				<div class="label text-white w-full text-center px-2">©2024 - Medical Solutions of Texas  <br />   All Rights Reserved</div>
-		{/if}
-	</footer>
+
 </main>
 <PrismicPreview {repositoryName} />
