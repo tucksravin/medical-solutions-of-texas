@@ -54,7 +54,7 @@
 				  <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/>
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">CIBOLO SPINE</h2>
 		</div>
-        <div class="mt-5 w-1/2 text-dark text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</div>
+        <div class="mt-5 sm:w-1/2 text-dark text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</div>
 	
 	</ContentWidth>
 </section>

@@ -22,7 +22,7 @@
         </div>
         {#if activeAccordians[i]}
           <div class="pr-16 w-full" transition:slide={{ duration: 500 }}>
-            <p class="text-left p-8 pt-4 text-[24px] transition-opacity {activeAccordians[i]?"opacity-100":"opacity-0"}" transition:fade>{accordian.content||LOREM}</p>
+            <p class="text-left p-8 pt-4 md:text-[24px] transition-opacity {activeAccordians[i]?"opacity-100":"opacity-0"}" transition:fade>{accordian.content||LOREM}</p>
           </div>
         {/if}
         <i class="absolute right-8 top-10 fa-sharp fa-thin fa-plus fa-2xl scale-150 text-dark transition-transform duration-300 ease-in-out opacity-80 hover:opacity-100 origin-center {activeAccordians[i] ? 'rotate-45' : ''}"/>

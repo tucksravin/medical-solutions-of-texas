@@ -63,9 +63,9 @@
 <section class="bg-white py-20">
     <ContentWidth>
         <h4 class="text-dark">Our Clients</h4>
-        <div class="flex flex-col md:flex-row justify-evenly items-center w-full my-16">
+        <div class="flex flex-col md:flex-row justify-evenly items-center w-full my-16 gap-8">
             <h3 class="text-dark text-center">Cibolo <br/> Spine </h3>
-            <img alt="revogen logo" src={revogenColor} class="w-1/5"/>
+            <img alt="revogen logo" src={revogenColor} class="w-64"/>
             <h3 class="text-dark text-center"> Partner <br/> Logo </h3>
         </div>
         <div class="h-0.5 bg-dark w-full"/>
