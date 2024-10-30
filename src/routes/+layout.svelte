@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
+	import { browser } from '$app/environment';
 	import { repositoryName } from '$lib/prismicio';
 	import { fly, fade, scale } from 'svelte/transition';
 	import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
@@ -60,6 +61,25 @@
   let isReady = false;
   let isTransitioning = false;
 
+  function disableScroll() {
+        if (browser) 
+                window.onscroll = ()=> window.scrollTo(0, 0);
+  }
+            
+        
+
+    function enableScroll() {
+        if (browser) {
+            setTimeout( () => window.onscroll = () => {});
+        }
+    };
+
+    $: if (!isReady||isTransitioning) {
+        disableScroll();
+    } else {
+        enableScroll();
+    }
+
 
   onMount(()=>{
 	
@@ -99,10 +119,12 @@
 
 <svelte:window bind:innerWidth={viewportWidth} />
 
+
+
 <!-- <button class="bg-black p-2 bump text-white z-50 fixed top-12 right-12" on:click={()=>isTransitioning=!isTransitioning}> {isTransitioning?"transitioning":" not transitioning"}</button> -->
 
 {#if isTransitioning||!isReady}
-	<div class="bg-[#140F09] z-40 fixed w-screen h-screen top-0 left-0" out:fade={{duration:700, delay:700}} ></div>
+	<div class="bg-[#140F09] z-40 fixed w-screen h-screen top-0 left-0 pointer-events-none" out:fade={{duration:700, delay:700}} ></div>
 {/if}
 
 {#if isReady}
@@ -151,7 +173,7 @@
 </div>
 {/if}
 
-<main bind:this={main}>
+<main bind:this={main} >
 	<nav class="nav-text fixed top-0 w-full h-28 py-4 z-20 transition duration-300 ease-in {showNav?"":"-translate-y-full"}">
 		<ContentWidth class="h-full flex flex-row justify-between items-center">
 		<div/>
