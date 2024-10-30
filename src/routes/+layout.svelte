@@ -51,11 +51,7 @@
 		if (Math.abs(currentScrollY - lastScrollY) > 10) {
 			showNav = currentScrollY < lastScrollY;
 		}
-		
-		// Always show nav when at the top of the page
-		if (currentScrollY === 0) {
-			showNav = true;
-		}
+
 		
 		lastScrollY = currentScrollY;
 	}
@@ -69,6 +65,8 @@
 	
 
 	window.addEventListener('scroll', handleScroll)
+	if(viewportWidth<768)
+		showNav=false;
 
 	setTimeout(()=>{
 		isReady = true;
