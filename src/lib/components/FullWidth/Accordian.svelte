@@ -1,5 +1,6 @@
 <script lang='ts'>
     import { fade, slide } from 'svelte/transition';
+  import Footer from '../Footer.svelte';
 
   
     const LOREM = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat m dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc."
@@ -20,7 +21,7 @@
          
         </div>
         {#if activeAccordians[i]}
-          <div class="pr-16" transition:slide={{ duration: 500 }}>
+          <div class="pr-16 w-full" transition:slide={{ duration: 500 }}>
             <p class="text-left p-8 pt-4 text-[24px] transition-opacity {activeAccordians[i]?"opacity-100":"opacity-0"}" transition:fade>{accordian.content||LOREM}</p>
           </div>
         {/if}

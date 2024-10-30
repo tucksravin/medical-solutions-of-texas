@@ -44,7 +44,7 @@
 			{#if darken}
 			<div class="bg-darken-gradient pointer-events-none absolute w-full h-full top-0 left-0 -z-10" />
 			{/if}
-			<div class="w-screen h-screen absolute top-0 left-0">
+			<div class="w-screen h-screen absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
 			<ContentWidth class='{$$props.class || 'flex items-center justify-center'} h-full'>
 				<slot />
 			</ContentWidth>

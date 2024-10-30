@@ -45,3 +45,14 @@
 	</div>
 
 </ContentWidth>
+
+<section class="bg-white py-20">
+    <ContentWidth>
+        <h4 class="text-dark">Our Clients</h4>
+        <div class="flex flex-col md:flex-row justify-evenly w-full">
+            <h3>Cibolo <br/> Spine </h3>
+            <img alt="revogen logo" src={revogenLogo} class="w-1/5"/>
+            <h3 class="text-dark"> Partner <br/> Logo </h3>
+        </div>
+    </ContentWidth>
+</section>
