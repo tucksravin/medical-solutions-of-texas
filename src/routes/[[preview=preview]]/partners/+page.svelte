@@ -2,10 +2,24 @@
     import ScreenWidthImage from "$lib/components/ScreenWidth/ScreenWidthImage.svelte";
     import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
 
+
     import hero from "$lib/assets/images/partners/partnersHero.jpg"
     import revogenLogo from "$lib/assets/icons/logos/revogenLogo.png"
+    import revogenColor from "$lib/assets/images/partners/revogenColor.png"
+    import edge from "$lib/assets/images/partners/edge.png"
+    import ctl from "$lib/assets/images/partners/ctl.png"
+    import fourWeb from "$lib/assets/images/partners/4web.jpg"
+    import difusion from "$lib/assets/images/partners/difus.jpg"
+    import metalogix from "$lib/assets/images/partners/metalogix.png"
+    import expanding from "$lib/assets/images/partners/expanding.png"
+  import ScreenWidthGallerySliderSmall from "$lib/components/ScreenWidth/ScreenWidthGallerySliderSmall.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+
+  const imageArray = [edge, ctl, fourWeb, difusion, metalogix, expanding]
+
+  
 </script>
-<svelte:head><title>About | MSOT </title></svelte:head>
+<svelte:head><title>MSOT | Partners </title></svelte:head>
 
 <ScreenWidthImage class="fixed -z-10" src={hero}  darken backdrop />
 <div class="w-screen h-[20vh] fixed left-0 top-0 -z-10 bg-gradient-to-b from-[#140F09] via-[#140F09] to-transparent opacity-55" />
@@ -49,10 +63,17 @@
 <section class="bg-white py-20">
     <ContentWidth>
         <h4 class="text-dark">Our Clients</h4>
-        <div class="flex flex-col md:flex-row justify-evenly w-full">
-            <h3>Cibolo <br/> Spine </h3>
-            <img alt="revogen logo" src={revogenLogo} class="w-1/5"/>
-            <h3 class="text-dark"> Partner <br/> Logo </h3>
+        <div class="flex flex-col md:flex-row justify-evenly items-center w-full my-16">
+            <h3 class="text-dark text-center">Cibolo <br/> Spine </h3>
+            <img alt="revogen logo" src={revogenColor} class="w-1/5"/>
+            <h3 class="text-dark text-center"> Partner <br/> Logo </h3>
         </div>
+        <div class="h-0.5 bg-dark w-full"/>
     </ContentWidth>
+    <ScreenWidthGallerySliderSmall {imageArray} />
+
+
+
 </section>
+
+<Footer />

@@ -100,27 +100,23 @@
           
           {#each tripledImages as image }
           <div class="w-[360px] h-full mx-4">
-              <FourByThreeImage alt={altText} class="h-full object-cover -z-10"/>
+              <FourByThreeImage alt={altText} src={image} class="h-full object-cover -z-10"/>
           </div>
           {/each}
           
           
       </div>
-      <div class="absolute flex justify-center w-full bottom-0 left-0">
-        <ContentWidth class="h-full relative w-full">
-          <div class="h-2 w-5/6 m-auto bg-light rounded-full relative overflow-hidden translate-y-[16px]">
-            <div class="h-full rounded-full absolute top-0 right-0 bg-dark {isSlideAnimated ? 'transition-transform duration-[2000ms]': ''}" style="width:{1/imageArray.length*100}%; transform:translateX({-progressPosistion}%);"></div>
-            <div class="h-full rounded-full absolute top-0 right-0 bg-dark {isSlideAnimated ? 'transition-transform duration-[2000ms]': ''}" style="width:{1/imageArray.length*100}%; transform:translateX({progressWrapForwardPosition}%);"></div>
-            <div class="h-full rounded-full absolute top-0 right-0 bg-dark {isSlideAnimated ? 'transition-transform duration-[2000ms]': ''}" style="width:{1/imageArray.length*100}%; transform:translateX({-progressWrapBackwardPosition}%);"></div>
-          </div>
+      <div class="absolute flex justify-center w-full top-0 left-0">
+        
+ 
 
-          <button on:click={slideLeft} class="absolute -left-2 h-6 w-6 rounded-full border-[#C2D1D9] border-2 p-1 flex align-middle justify-center cursor-pointer transition-all duration-500 hover:bg-[#424B5A] hover:border-[#424B5A] active:bg-black bump">
-            <img alt='chevron-left' src={chevronLeft} class='-translate-x-[1px]' />
+          <button on:click={slideLeft} class="absolute left-0 h-[320px] bg-gradient-to-r from-white via-[#ffffffe0] to-transparent w-12 md:w-24 flex align-middle justify-center items-center cursor-pointer transition-all duration-500 bump">
+            <i class="fa-sharp fa-chevron-left fa-xl text-dark" />
           </button>
-          <button on:click={slideRight} class="absolute -right-2  -translate-y-[0.7px] h-6 w-6 rounded-full border-[#C2D1D9] border-2 p-1 flex align-middle cursor-pointer transition-all duration-500 justify-center hover:bg-[#424B5A] hover:border-[#424B5A] active:bg-black bump">
-            <img alt='chevron-right' src={chevronRight} class='translate-x-[1px] ' />
+          <button on:click={slideRight} class="absolute right-0 h-[320px] w-12 md:w-24 flex bg-gradient-to-l from-white via-[#ffffffe0] to-transparent align-middle cursor-pointer transition-all duration-500 justify-center items-center   bump">
+            <i class="fa-sharp fa-chevron-right fa-xl text-dark" />
           </button>
-        </ContentWidth>
+      
           
       </div>
   </div>
