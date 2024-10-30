@@ -47,8 +47,7 @@
 	const handleScroll = () => {
 		const currentScrollY = window.scrollY;
 		
-		// Show nav when scrolling up, hide when scrolling down
-		// Adding a small threshold (10px) to prevent micro-movements from triggering the nav
+	
 		if (Math.abs(currentScrollY - lastScrollY) > 10) {
 			showNav = currentScrollY < lastScrollY;
 		}
@@ -116,7 +115,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(4vw)"}
 			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"md:-translate-y-[112px]":""}"><img class="h-full {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{:else}
@@ -126,7 +125,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
 			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"md:-translate-y-[112px]":""}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{/if}
@@ -155,7 +154,7 @@
 {/if}
 
 <main bind:this={main}>
-	<nav class="nav-text fixed top-0 w-full h-28 py-4 z-20 transition duration-300 ease-in {showNav?"":"md:-translate-y-full"}">
+	<nav class="nav-text fixed top-0 w-full h-28 py-4 z-20 transition duration-300 ease-in {showNav?"":"-translate-y-full"}">
 		<ContentWidth class="h-full flex flex-row justify-between items-center">
 		<div/>
 			{#if viewportWidth>768}

@@ -171,8 +171,9 @@ export let data:any;
 
 <style>
 	.bg-darken-gradient{
-		background: linear-gradient(180deg, rgba(203, 195, 164, 0.20) 33.5%, #656F5C15 100%);
-		background-blend-mode: multiply;
+		background: linear-gradient(0deg, #000 0%, #000 100%);
+		background-blend-mode: saturation;
+		opacity: 0.3;
 	}
 </style>
 
@@ -243,6 +244,7 @@ export let data:any;
 					
 				  ></iframe>
 				  <div class="w-full h-full absolute top-0 left-0 bg-darken-gradient"/>
+				  <!-- <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/> -->
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">We'll Get You</h2>
 		</div>
 		<div class="-mt-6 overflow-hidden" >
@@ -279,26 +281,28 @@ export let data:any;
 		{/if}
 		<div class="md:w-1/2 mt-6 transition-opacity duration-1000 ease-out {isPainActive?"":"opacity-0"}">
 			<div class="duration-1000 ease-out {isPainActive?"opacity-25 delay-[1400ms]":""}">
-				<h4 class="text-dark mb-20 duration-1000 ease-out {isPainActive?"opacity-100":""}">We Know Your Pain </h4>
+				<h4 class="text-dark mb-10 md:mb-20 duration-1000 ease-out {isPainActive?"opacity-100":""}">We Know Your Pain </h4>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100":"opacity-0"}">government <br/> contracts are</h3>
-				<h3 class="text-dark duration-1000 ease-out mt-6  {isPainActive?"opacity-100 delay-[350ms]":"opacity-0"}">opaque</h3>
+				<h3 class="text-dark duration-1000 ease-out md:mt-6  {isPainActive?"opacity-100 delay-[350ms]":"opacity-0"}">opaque</h3>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[700ms]":"opacity-0"}">confusing</h3>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1050ms]":"opacity-0"}">inaccessible</h3>
 			</div>
 		</div>
-		<div class="md:w-1/2 mt-6">
-			<h4 class="text-dark mb-20  duration-1000 ease-out {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">We Know What To Do</h4>
+		<div class="md:w-1/2 mt-20 md:mt-6">
+			<h4 class="text-dark mb-10 md:mb-20  duration-1000 ease-out {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">We Know What To Do</h4>
 			<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">with us <br/> You’ll get</h3>
-			<h3 class="text-dark duration-1000 ease-out mt-6 {isPainActive?"opacity-100 delay-[2100ms]":"opacity-0"}">transparency</h3>
+			<h3 class="text-dark duration-1000 ease-out md:mt-6 {isPainActive?"opacity-100 delay-[2100ms]":"opacity-0"}">transparency</h3>
 			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100 delay-[2450ms] ":"opacity-0"}">understanding</h3>
 			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100  delay-[2800ms]  ":"opacity-0"}">access</h3>
 		</div>
 		
 	</ContentWidth>
 </section>
-<section class="bg-mid flex flex-col items-center justify-center gap-10 py-32">
-	<h4 class="text-dark">We’re here to help</h4>
-	<p class="text-dark text-center">Take the headache and confusion out of dealing <br /> with government healthcare </p>
+<section class="bg-mid py-32">
+	<ContentWidth class="flex flex-col items-center justify-center gap-10">
+		<h4 class="text-dark">We’re here to help</h4>
+		<p class="text-dark text-center max-w-screen-sm">Take the headache and confusion out of dealing with government healthcare </p>
+	</ContentWidth>
 </section>
 
 <section class="bg-light w-screen aspect-[5/2] relative">
@@ -312,7 +316,7 @@ export let data:any;
 			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-[#998B6A] border-t-[6px]" />
 			<h4 class="text-dark absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Our Partner</h4>
 			
-			<p class="text-dark text-center text-[24px]">“MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.”</p>
+			<p class="text-dark text-center mx-5 text-[24px]">“MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.”</p>
 			<img src={revogenLogo} alt="service disabled veteran owned small business logo" class="h-32"/>
 		</div>
 	</div>
@@ -365,13 +369,13 @@ export let data:any;
 <footer class=" h-56 md:h-48 py-6 bg-[#140F09]">
 	<ContentWidth class="flex flex-row justify-between h-36 sm:h-full">
 		<div class="flex flex-col justify-between items-start">
-			<a href="/" class="bump self-start h-20 relative"><img class="h-full transitionn duration-700 ease-fast-slow delay-500" src={msotLogo} style="transform-origin:top left" alt="msot logo"/></a>
+			<a href="/" class="bump self-start h-16 md:h-20 relative"><img class="h-full transitionn duration-700 ease-fast-slow delay-500" src={msotLogo} style="transform-origin:top left" alt="msot logo"/></a>
 			{#if viewportWidth > 560}
 			<div class="label text-white ">©2024 - Medical Solutions of Texas  |   All Rights Reserved</div>
 			{/if}
 		
 		</div>
-		<img src={sdvosbLogo} alt="sdvosb logo" class="h-24"/>
+		<img src={sdvosbLogo} alt="sdvosb logo" class="h-16 md:h-24"/>
 	</ContentWidth>
 	{#if viewportWidth <= 560}
 			<div class="label text-white w-full text-center px-2">©2024 - Medical Solutions of Texas  <br />   All Rights Reserved</div>

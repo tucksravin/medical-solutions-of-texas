@@ -52,13 +52,13 @@ onMount(() => {
 <footer class=" h-56 md:h-48 bg-[#998B6A]">
 	<ContentWidth class="flex flex-row justify-between  py-6 h-36 sm:h-full border-t-2 border-white">
 		<div class="flex flex-col justify-between items-start">
-			<a href="/" class="bump self-start h-20 relative"><img class="h-full transitionn duration-700 ease-fast-slow delay-500" src={msotLogo} style="transform-origin:top left" alt="msot logo"/></a>
+			<a href="/" class="bump self-start h-16 md:h-20 relative"><img class="h-full transitionn duration-700 ease-fast-slow delay-500" src={msotLogo} style="transform-origin:top left" alt="msot logo"/></a>
 			{#if viewportWidth > 560}
 			<div class="label text-white ">©2024 - Medical Solutions of Texas  |   All Rights Reserved</div>
 			{/if}
 		
 		</div>
-		<img src={sdvosbLogo} alt="sdvosb logo" class="h-24"/>
+		<img src={sdvosbLogo} alt="sdvosb logo" class="h-16 md:h-24"/>
 	</ContentWidth>
 	{#if viewportWidth <= 560}
 			<div class="label text-white w-full text-center px-2">©2024 - Medical Solutions of Texas  <br />   All Rights Reserved</div>
