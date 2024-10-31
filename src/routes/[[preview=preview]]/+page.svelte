@@ -173,7 +173,7 @@ export let data:any;
 	.bg-darken-gradient{
 		background: linear-gradient(0deg, #000 0%, #000 100%);
 		background-blend-mode: saturation;
-		opacity: 0.3;
+		opacity: 0.1;
 	}
 </style>
 
@@ -245,7 +245,7 @@ export let data:any;
 					
 				  ></iframe>
 				  <div class="w-full h-full absolute top-0 left-0 bg-darken-gradient"/>
-				  <!-- <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/> -->
+				  <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/> >
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">We'll Get You</h2>
 		</div>
 		<div class="-mt-6 overflow-hidden" >

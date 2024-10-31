@@ -9,6 +9,7 @@
     import hero from "$lib/assets/images/process/processHero.jpg"
     import surgeonVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.png"
     import timeline from "$lib/assets/images/process/timeline.svg"
+    import timeline_mobile from "$lib/assets/images/process/timeline_mobile.svg"
   import Footer from "$lib/components/Footer.svelte";
 
     let viewportHeight:number;
@@ -88,13 +89,13 @@
 			<img src={surgeonVideoPlaceholder} alt="surgeons placeholder" class="w-full h-full absolute top-0 left-0 object-cover"/>
 			<iframe 
 					title="background video" 
-					src={`https://player.vimeo.com/video/1019997302?background=1`}
-					class="absolute w-full aspect-video top-0 left-0 contrast-[1.15]"
+					src={`https://player.vimeo.com/video/1025187591?background=1`}
+					class="absolute w-full aspect-video top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 contrast-[1.15]"
 					frameborder="0"
 					
 				  ></iframe>
 				  <div class="w-full h-full absolute top-0 left-0 bg-darken-gradient"/>
-				  <!-- <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/> -->
+				  <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/> 
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">OUR PROCESS</h2>
 		</div>
         <div bind:this={threeStepTrigger} class="w-full my-24 flex flex-col md:flex-row justify-between gap-8">
@@ -126,8 +127,8 @@
 
 </section>
 
-<section class="bg-light w-screen aspect-[5/2] relative">
-	<img src={viewportWidth>768 ? timeline : timeline} alt="timelines" class="w-full" />
+<section class="bg-light w-screen md:aspect-[5/2] relative">
+	<img src={viewportWidth>768 ? timeline : timeline_mobile} alt="timelines" class="w-full" />
 </section>
 
 <section class="bg-light pt-32 pb-16">

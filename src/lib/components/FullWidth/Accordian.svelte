@@ -15,9 +15,9 @@
   
   <div class="w-full flex flex-col border-dark border-b-2 cursor-pointer">
     {#each accordianProps as accordian, i}
-      <button class="w-full border-t-2 border-dark cursor-pointer flex flex-col md:flex-row relative" on:click={() => activeAccordians[i] = !activeAccordians[i]}>
+      <button class="w-full border-t-2 border-dark cursor-pointer flex flex-col xl:flex-row relative" on:click={() => activeAccordians[i] = !activeAccordians[i]}>
         <div class="h-20 p-8 w-full flex flex-row justify-between items-center">
-          <h4 class="text-left text-dark">{accordian.label}</h4>
+          <h4 class="text-left text-dark pr-12 md:pr-0 md:text-nowrap">{accordian.label}</h4>
          
         </div>
         {#if activeAccordians[i]}
