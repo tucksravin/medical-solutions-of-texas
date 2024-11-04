@@ -6,12 +6,11 @@
 	import { fly, fade, scale } from 'svelte/transition';
 	import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
 	import msotLogoSand from "$lib/assets/icons/logos/msot_logo_sand.svg"
-	import sdvosbLogo from "$lib/assets/icons/logos/sdvosb-white.svg"
 	import "../app.css";
-  import ContentWidth from '$lib/components/ContentWidth/ContentWidth.svelte';
-  import { onMount } from 'svelte';
-  import OnMount from '$lib/components/TriggerTransitionOnMount.svelte';
-  import { onNavigate } from '$app/navigation';
+	import ContentWidth from '$lib/components/ContentWidth/ContentWidth.svelte';
+	import { onMount } from 'svelte';
+	import OnMount from '$lib/components/TriggerTransitionOnMount.svelte';
+	import { onNavigate } from '$app/navigation';
 
   let isOverlayVisible = false;
   let viewportWidth:number;
