@@ -2,20 +2,32 @@
     import ScreenWidthImage from "$lib/components/ScreenWidth/ScreenWidthImage.svelte";
     import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
 
-
     import hero from "$lib/assets/images/partners/partnersHero.jpg"
     import revogenLogo from "$lib/assets/icons/logos/revogenLogo.png"
-    import revogenColor from "$lib/assets/images/partners/revogenColor.png"
-    import edge from "$lib/assets/images/partners/edge.png"
-    import ctl from "$lib/assets/images/partners/ctl.png"
-    import fourWeb from "$lib/assets/images/partners/4web.jpg"
-    import difusion from "$lib/assets/images/partners/difus.jpg"
-    import metalogix from "$lib/assets/images/partners/metalogix.png"
-    import expanding from "$lib/assets/images/partners/expanding.png"
-  import ScreenWidthGallerySliderSmall from "$lib/components/ScreenWidth/ScreenWidthGallerySliderSmall.svelte";
-  import Footer from "$lib/components/Footer.svelte";
+  
+    import revogenDuo from "$lib/assets/images/partners/partners_duotone/revogen-duo.png"
 
-  const imageArray = [edge, ctl, fourWeb, difusion, metalogix, expanding]
+    import caerus from "$lib/assets/images/partners/partners_duotone/caerus.png"
+    import aegis from "$lib/assets/images/partners/partners_duotone/AEGIS-SPINE-logo-300x94.png"
+    import leith from "$lib/assets/images/partners/partners_duotone/Leith.png"
+    import centinel from "$lib/assets/images/partners/partners_duotone/centinel spine.png"
+    import spinal from "$lib/assets/images/partners/partners_duotone/SpinalSimplicityLogo.Master.png"
+    import edge from "$lib/assets/images/partners/partners_duotone/EDGe.png"
+    import ctl from "$lib/assets/images/partners/partners_duotone/ctl.png"
+    import fourWeb from "$lib/assets/images/partners/partners_duotone/4web.png"
+    import difusion from "$lib/assets/images/partners/partners_duotone/difusion.png"
+    import metalogix from "$lib/assets/images/partners/partners_duotone/Metalogix.png"
+    import expanding from "$lib/assets/images/partners/partners_duotone/expanding innovations.png"
+    import aurora from "$lib/assets/images/partners/partners_duotone/aurora.png"
+    import axial from "$lib/assets/images/partners/partners_duotone/axial_biologics_logo.png"
+    import bridge from "$lib/assets/images/partners/partners_duotone/bonebridge.png"
+    import path from "$lib/assets/images/partners/partners_duotone/pathkeeper.png"
+    import united from "$lib/assets/images/partners/partners_duotone/united ortho.png"
+
+
+    import Footer from "$lib/components/Footer.svelte";
+
+  const imageArray = [caerus, aegis, leith, centinel, spinal,edge, ctl, fourWeb, difusion, metalogix, expanding, aurora, axial, bridge, path, united]
 
   
 </script>
@@ -65,12 +77,17 @@
         <h4 class="text-dark">Our Clients</h4>
         <div class="flex flex-col md:flex-row justify-evenly items-center w-full my-16 gap-8">
             <h3 class="text-dark text-center">Cibolo <br/> Spine </h3>
-            <img alt="revogen logo" src={revogenColor} class="w-64"/>
+            <img alt="revogen logo" src={revogenDuo} class="w-64"/>
             <h3 class="text-dark text-center"> Partner <br/> Logo </h3>
         </div>
         <div class="h-0.5 bg-dark w-full"/>
+        <div class="w-full mt-12 flex flex-row flex-wrap gap-x-12 gap-y-24 justify-evenly items-center">
+            {#each imageArray as image}
+                <img src={image} alt="partner logo" class="w-full md:w-1/3 lg:w-1/4 xl:w-1/5 max-w-52 max-h-24 object-scale-down"/>
+            {/each}
+        </div>
     </ContentWidth>
-    <ScreenWidthGallerySliderSmall {imageArray} />
+   
 
 
 
