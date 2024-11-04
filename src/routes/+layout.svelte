@@ -30,7 +30,7 @@
             href:"/process"
         },
         {
-            label:"Rep Login",
+            label:"Reps",
             href:"/rep-login"
         },
         {

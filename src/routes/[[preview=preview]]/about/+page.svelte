@@ -9,6 +9,54 @@
     import placeholder from "$lib/assets/images/profile_placeholder.png"
   import Accordian from "$lib/components/FullWidth/Accordian.svelte";
   import Footer from "$lib/components/Footer.svelte";
+  import TeamWithPopup from "$lib/components/FullWidth/TeamWithPopup.svelte";
+
+  const LOREM = "Lorem ipsum odor amet, consectetuer adipiscing elit. Maecenas felis feugiat nulla nisl proin? Vel ultricies senectus faucibus morbi vulputate. Facilisis natoque duis maecenas netus vel arcu elementum. Posuere facilisi gravida malesuada potenti vel taciti blandit. Integer nibh diam diam lectus nullam varius venenatis. Habitant quis pellentesque vulputate hac amet. Sodales euismod purus vehicula scelerisque cursus facilisi. Torquent quisque nibh ante duis nisl. Ridiculus ultricies natoque eros eget phasellus odio enim. Lectus adipiscing tristique tempor convallis ridiculus eleifend. Vehicula accumsan enim augue porta sodales tortor risus. Consectetur vestibulum laoreet ullamcorper quisque potenti sit erat libero. Sodales mattis cursus ex amet primis hac ligula. Vulputate mi luctus est euismod tortor tincidunt. Porttitor in curabitur aliquam, rhoncus eget nam vestibulum fringilla. Tincidunt ante ligula euismod fringilla lectus. Fusce habitant fringilla porta; sit imperdiet sit ultrices ipsum. Leo euismod lacinia placerat suscipit congue. Gravida phasellus diam facilisi habitasse; risus duis fusce?"
+
+  const teamArray = [
+    {
+        name:"Albert Turgon",
+        title:"Chief Executive Officer",
+        image:placeholder,
+        bio:LOREM
+
+    },
+    {
+        name:"Tim Watson",
+        title:"Chief Operating Officer",
+        image:placeholder,
+        bio:LOREM
+
+    },
+    {
+        name:"Kylene Carse",
+        title:"Chief Financial Officer",
+        image:placeholder,
+        bio:LOREM
+
+    },
+    {
+        name:"Edward Anderson, MD",
+        title:"Founder",
+        image:placeholder,
+        bio:LOREM
+
+    },
+    {
+        name:"Holden Calhoun",
+        title:"Director of Sales",
+        image:placeholder,
+        bio:LOREM
+
+    },
+    {
+        name:"Kathy Castro",
+        title:"Customer Support",
+        image:placeholder,
+        bio:LOREM
+
+    },
+  ]
 </script>
 
 
@@ -25,8 +73,8 @@
 </div>
 
 <ContentWidth>
-	<div class="w-full flex justify-center items-center mt-52 mb-40">
-		<div class="w-full p-6 sm:p-12  lg:px-40 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-10 mb-12">
+	<div class="w-full flex justify-center items-center my-32">
+		<div class="w-full p-12 lg:p-32  lg:px-40 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-10 mb-12">
 			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<h4 class="text-mid absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">what differentiates us</h4>
@@ -78,7 +126,7 @@
         </div>
         <div class="relative mt-20 md:mt-0 w-full md:w-1/2 xl:w-2/5 xl:pr-[10%] flex flex-col gap-5">
             <h5 class="text-dark">Who We Are</h5>
-            <h3 class="text-dark">We have what you’re  looking for</h3>
+            <h3 class="text-dark">We have what you’re looking for</h3>
             <div class="text-dark label">​​MSOT was founded by a team of medical sales experts in 2022. With a career running Air Force logistics on bases in the continental United States to forward deployment locations like [location 1] and [location 2], we have the experience to know how to work within the complex system of military contracts and procurement. 
                 <br/> <br />
                 We spent our careers grappling with the difficulties in getting and keeping VA hospitals and DoD bases equipped with med-surg supplies, from the side of a logistics officer and the side of the medical sales. And so we formed MSOT, pairing experts on both sides to build an organization uniquely suited to connect med-surg suppliers with VA and DoD contracts.</div>
@@ -89,46 +137,12 @@
 <section class="bg-[#998B6A] py-20">
     <ContentWidth>
         <h4 class="text-light my-20">The Team </h4>
-        <div class="w-full flex flex-col lg:flex-row gap-y-20 items-center justify-between">
-            <div class="w-64 md:w-96 lg:w-72 xl:w-96">
-                <div class="w-full aspect-square relative overflow-hidden">
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 left-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 left-0" />
-                    <img alt="albert turgon" src={placeholder} class="w-full h-full object-cover absolute" />
-                </div>
-                <div class="w-full h-[2px] bg-light mt-6" />
-                <h5 class="text-light mt-6">Chief Operating Officer</h5>
-                <h3 class="text-white mt-6">Albert Turgon</h3>
-                
-            </div> 
-            <div class="w-64 md:w-96 lg:w-72 xl:w-96">
-                <div class="w-full aspect-square relative overflow-hidden">
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 left-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 left-0" />
-                    <img alt="albert turgon" src={placeholder} class="w-full h-full object-cover absolute" />
-                </div>
-                <div class="w-full h-[2px] bg-light mt-6" />
-                <h5 class="text-light mt-6">President</h5>
-                <h3 class="text-white mt-6">Tim Watson</h3>
-                
-            </div> 
-            <div class="w-64 md:w-96 lg:w-72 xl:w-96">
-                <div class="w-full aspect-square relative overflow-hidden">
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 left-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 left-0" />
-                    <img alt="albert turgon" src={placeholder} class="w-full h-full object-cover absolute" />
-                </div>
-                <div class="w-full h-[2px] bg-light mt-6" />
-                <h5 class="text-light mt-6">holden caldon</h5>
-                <h3 class="text-white mt-6">holden caldon</h3>
-                
-            </div> 
+
+        <div class="w-full flex flex-col lg:flex-row gap-y-20 items-center justify-between flex-wrap">
+            {#each teamArray as person}
+            <TeamWithPopup name={person.name} title={person.title} headshot={person.image} bio={person.bio} />
+            {/each}
+           
         </div>
     </ContentWidth>
 </section>
