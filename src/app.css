@@ -219,6 +219,10 @@ line-height: 40px; /* 133.333% */
        
     }
     
+    div{
+        font-size:12px;
+        line-height: normal;
+    }
 
 
 }

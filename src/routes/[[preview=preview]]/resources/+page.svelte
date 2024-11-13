@@ -12,13 +12,13 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
     </ContentWidth>
 </section>
 <section class="bg-mid">
-    <ContentWidth class="border-t-2 border-dark flex flex-row py-10">
-        <div class="w-1/2 pr-12 flex flex-col gap-10 items-start">
+    <ContentWidth class="border-t-2 border-dark flex flex-col md:flex-row py-10">
+        <div class="md:w-1/2 pr-12 flex flex-col gap-10 items-start">
             <h3 class="text-dark">CHARGE SHEET</h3>
             <BracketButton class="text-dark" href="/">DOWNLOAD</BracketButton>
         </div>
-        <div class="w-1/2 pr-12 flex flex-col gap-10 items-start">
-            <p class="text-dark text-[24px]">
+        <div class="mt-24 md:mt-0 md:w-1/2 pr-12 flex flex-col gap-10 items-start">
+            <p class="text-dark md:text-[24px] text-sm leading-normal">
                 1583 Thousand Oaks Dr. <br/>
                 San Antonio, TX 78232 <br/><br/>
                 Phone: 210.744.9686 <br/>
@@ -31,8 +31,8 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
     </ContentWidth>
 </section>
 <section class="bg-mid pt-24">
-    <ContentWidth class="flex flex-row justify-between py-10">
-        <div class="w-[calc(33%-20px)] flex flex-col">
+    <ContentWidth class="flex flex-col md:flex-row justify-between py-10">
+        <div class="md:w-[calc(33%-20px)] flex flex-col  mt-12 md:mt-0">
             <h3 class="text-dark mb-14">Supplier 1</h3>
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
                 <a href="/" class="bump">
@@ -52,7 +52,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
             </div>
             
         </div>
-        <div class="w-[calc(33%-20px)] flex flex-col">
+        <div class="md:w-[calc(33%-20px)] flex flex-col  mt-12 md:mt-0">
             <h3 class="text-dark mb-14">Supplier 2</h3>
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
                 <a href="/" class="bump">
@@ -72,7 +72,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
             </div>
             
         </div>
-        <div class="w-[calc(33%-20px)] flex flex-col">
+        <div class="md:w-[calc(33%-20px)] flex flex-col mt-12 md:mt-0">
             <h3 class="text-dark mb-14">Technique Guide</h3>
             
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
