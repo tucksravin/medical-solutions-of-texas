@@ -120,12 +120,7 @@
 
 	</ContentWidth>
 </section>
-<section class="bg-light pt-32 pb-16">
-    <ContentWidth>
-        <h4 class="text-dark"> Typical Timeline </h4>
-    </ContentWidth>
 
-</section>
 
 <section class="bg-light w-screen md:aspect-[5/2] relative">
 	<img src={viewportWidth>768 ? timeline : timeline_mobile} alt="timelines" class="w-full" />
@@ -136,9 +131,7 @@
         <h3 class="text-dark mb-10"> Common Questions & Our Answers</h3>
         <Accordian accordianProps={[
             {label:"Why does SDVOSB give priority for winning VA and DoD contracts?", content:"​​In the 2016 Kingdomware Techs., Inc. v. United States case, in which a SDVOSB sued after failing to win a VA contract, the Supreme Court unanimously affirmed the Rule of Two provision of a 2006 federal law. The Rule of Two mandates that government contracts shall be set aside for veteran-owned small businesses if at least two such businesses exist. Further, that same law gives small businesses owned by service-disabled veterans (SDVOSBs) significant priority over even other veteran-owned businesses. This results in a wide swath of contracts set aside specifically for veteran-owned businesses, ones that SDVOSBs, like MSOT, have priority in winning."},
-            {label:"What does our typical timeline look like after winning a contract?", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."},
-            {label:"one more specific question:", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."},
-           
+            {label:"What does our typical timeline look like after winning a contract?", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."} 
         ]} />
     </ContentWidth>
 

@@ -50,7 +50,7 @@
 			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<h4 class="text-mid absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">working with the best</h4>
-            <img src={revogenLogo} alt="revogen logo" class="w-64"/>
+            <img src={revogenLogo} alt="revogen logo" class="w-64 brightness-0 invert"/>
 
 			<div class="text-white text-center leading-normal md:text-[24px] max-w-[900px]">
                 MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.</div>

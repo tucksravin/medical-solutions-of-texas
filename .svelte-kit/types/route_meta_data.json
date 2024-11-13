@@ -54,6 +54,10 @@
 		"src/routes/[[preview=preview]]/process/+page.server.js",
 		"src/routes/+layout.server.js"
 	],
+	"/[[preview=preview]]/resources": [
+		"src/routes/[[preview=preview]]/resources/+page.server.js",
+		"src/routes/+layout.server.js"
+	],
 	"/slice-simulator": [
 		"src/routes/+layout.server.js"
 	],

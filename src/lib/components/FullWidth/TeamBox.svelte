@@ -21,11 +21,11 @@
 {#if href}
 <a {href} class="w-full h-full relative">
     <img {src} {alt} class="w-full h-full object-cover"/>
-    <div class="w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center bg-dark opacity-0 hover:opacity-100 hover:bg-opacity-75 transition-all duration-500 ease-fast-slow">
+    <div class="w-full h-full absolute top-0 left-0 flex flex-col items-start justify-center bg-dark opacity-0 hover:opacity-100 hover:bg-opacity-75 transition-all duration-500 ease-fast-slow">
         <div class="h-2"></div>
-        <h5 class="text-white my-3">{name}</h5>
-        <p class="text-light my-3">{title}</p>
-        <div class="h-6 my-3 flex flex-row items center justify-center transition-opacity">
+        <h5 class="text-white text-left my-3">{name}</h5>
+        <p class="text-light text-left my-3">{title}</p>
+        <div class="h-6 my-3 flex flex-row items-center justify-center transition-opacity">
             {#each socials as social }
                
                 <a href={social.href} class="mx-6 w-6 h-6 hover:opacity-75 transition-all bump">
@@ -49,11 +49,11 @@
  {:else}
 <div class="w-full h-full relative">
     <img {src} {alt} class="w-full h-full object-cover"/>
-    <div class="w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center bg-dark opacity-0 hover:opacity-100 hover:bg-opacity-75 transition-all duration-500 ease-fast-slow">
+    <div class="w-full h-full absolute top-0 left-0 flex flex-col items-start justify-center bg-dark opacity-0 hover:opacity-100 hover:bg-opacity-75 transition-all duration-500 ease-fast-slow">
         <div class="h-2"></div>
-        <h5 class="text-white my-3">{name}</h5>
-        <p class="text-light my-3">{title}</p>
-        <div class="h-6 my-3 flex flex-row items center justify-center ">
+        <h5 class="text-white my-3 text-left">{name}</h5>
+        <p class="text-light my-3 text-left">{title}</p>
+        <div class="h-6 my-3 flex flex-row items-center justify-center ">
             {#each socials as social }
             <a href={social.href} class="mx-6 w-6 h-6 hover:opacity-75 transition-all bump">
                 {#if social.platform==='facebook'}

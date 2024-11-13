@@ -45,8 +45,8 @@
         <img alt="albert turgon" src={headshot} class="w-full h-full object-cover absolute" />
     </div>
     <div class="w-full h-[2px] bg-light mt-6" />
-    <h5 class="text-light mt-6">{title}</h5>
-    <h3 class="text-white mt-6">{name}</h3>
+    <h5 class="text-light mt-4 text-left">{title}</h5>
+    <h3 class="text-white mt-2 text-left text-nowrap">{name}</h3>
     
 </button> 
 {#if showOverlay}

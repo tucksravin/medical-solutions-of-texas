@@ -6,6 +6,7 @@
 	import { fly, fade, scale } from 'svelte/transition';
 	import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
 	import msotLogoSand from "$lib/assets/icons/logos/msot_logo_sand.svg"
+	import msotLogoKhaki from "$lib/assets/icons/logos/msot_khaki.png"
 	import "../app.css";
 	import ContentWidth from '$lib/components/ContentWidth/ContentWidth.svelte';
 	import { onMount } from 'svelte';
@@ -29,8 +30,8 @@
             href:"/process"
         },
         {
-            label:"Reps",
-            href:"/rep-login"
+            label:"Resources",
+            href:"/resources"
         },
         {
             label:"Contact",
@@ -134,7 +135,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(4vw)"}
 			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in   {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{:else}
@@ -144,7 +145,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
 			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={msotLogo} alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{/if}
