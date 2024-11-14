@@ -30,7 +30,7 @@
             href:"/process"
         },
         {
-            label:"Resources",
+            label:"Reps",
             href:"/resources"
         },
         {
@@ -85,8 +85,7 @@
 	
 
 	window.addEventListener('scroll', handleScroll)
-	if(viewportWidth<768)
-		showNav=false;
+
 
 	setTimeout(()=>{
 		isReady = true;
