@@ -21,13 +21,14 @@
     import aurora from "$lib/assets/images/partners/partners_duotone/aurora.png"
     import axial from "$lib/assets/images/partners/partners_duotone/axial_biologics_logo.png"
     import bridge from "$lib/assets/images/partners/partners_duotone/bonebridge.png"
-    import path from "$lib/assets/images/partners/partners_duotone/pathkeeper.png"
+    import path from "$lib/assets/images/partners/partners_duotone/pathkeeper.png" 
     import united from "$lib/assets/images/partners/partners_duotone/united ortho.png"
+    import cibolo from "$lib/assets/images/partners/partners_duotone/ciboloSpine.jpg"
 
 
     import Footer from "$lib/components/Footer.svelte";
 
-  const imageArray = [caerus, aegis, leith, centinel, spinal,edge, ctl, fourWeb, difusion, metalogix, expanding, aurora, axial, bridge, path, united]
+  const imageArray = [revogenDuo, cibolo, caerus, aegis, leith, centinel, spinal,edge, ctl, fourWeb, difusion, metalogix, expanding, aurora, axial, bridge, path, united]
 
   
 </script>
@@ -74,12 +75,7 @@
 
 <section class="bg-white py-20">
     <ContentWidth>
-        <h4 class="text-dark">Our Clients</h4>
-        <div class="flex flex-col md:flex-row justify-evenly items-center w-full my-16 gap-8">
-            <h3 class="text-dark text-center">Cibolo <br/> Spine </h3>
-            <img alt="revogen logo" src={revogenDuo} class="w-64"/>
-            <h3 class="text-dark text-center"> Partner <br/> Logo </h3>
-        </div>
+        <h4 class="text-dark mb-12">Our Clients</h4>
         <div class="h-0.5 bg-dark w-full"/>
         <div class="w-full mt-12 flex flex-row flex-wrap gap-x-12 gap-y-24 justify-evenly items-center">
             {#each imageArray as image}
