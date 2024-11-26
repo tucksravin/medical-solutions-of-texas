@@ -225,8 +225,8 @@ export let data:any;
 			</div>
 			<div class="text-white text-center leading-normal md:text-[24px]">Our expertise, SDVOSB (Service Disabled Veteran Owned Small Business) status, and deep network of relationships allows us to offer solutions where others hit roadblocks.</div>
 			<div class="flex flex-col md:flex-row justify-center items-center gap-8">
-				<BracketButton href="/" class="text-mid button-text">Contact Us</BracketButton>
-				<BracketButton href="/" class="text-mid button-text">Capabilities Statement</BracketButton>
+				<BracketButton href="/contact" class="text-mid button-text">Contact Us</BracketButton>
+				<BracketButton href="/pdfs/MSOT_Capabilities.pdf" class="text-mid button-text">Capabilities Statement</BracketButton>
 			</div>
 		</div>
 	</div>
@@ -346,7 +346,7 @@ export let data:any;
 
 			</div>
 		</div>
-		<BracketButton class="text-dark mb-12" href="/about">Learn More</BracketButton>
+		<BracketButton class="text-dark mb-12" href="/process">Learn More</BracketButton>
 	</ContentWidth>
 </section>
 <section class="bg-light w-screen aspect-[5/2] relative">
@@ -362,8 +362,8 @@ export let data:any;
 		
 	</div>
 	<div class="flex flex-row gap-6 ml-2" bind:this={ctaTrigger}>
-		<BracketButton class="text-mid" href="/">Contact Us</BracketButton>
-		<BracketButton class="text-mid" href="/">Learn More</BracketButton>
+		<BracketButton class="text-mid" href="/contact">Contact Us</BracketButton>
+		<BracketButton class="text-mid" href="/process">Learn More</BracketButton>
 	</div>
 </ScreenWidthImage>
 

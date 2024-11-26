@@ -57,7 +57,7 @@
 
 <ContentWidth>
 	<div class="w-full flex justify-center items-center mt-52 mb-40" >
-		<div class="w-full p-8 lg:pt-48 lg:pb-32 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-10 mb-12">
+		<div class="w-full p-8 lg:py-48 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-8 mb-12">
 			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
 			<h4 class="text-mid absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Simplifying Complexity</h4>
@@ -70,7 +70,7 @@
 		</div>
 	</div>
     <div class="w-full flex justify-center items-center mb-40">
-		<div class="w-full p-6 sm:p-12  lg:px-40 relative flex flex-col items-center justify-center gap-10 mb-12">
+		<div class="w-full p-6 sm:p-12  lg:px-40 relative flex flex-col items-center justify-center gap-8 mb-12">
 			
             <p class="text-white text-center">Let’s Simplify It…</p>
 
@@ -126,7 +126,7 @@
 	<img src={viewportWidth>768 ? timeline : timeline_mobile} alt="timelines" class="w-full" />
 </section>
 
-<section class="bg-light pt-32 pb-16">
+<section class="bg-light pt-32 pb-48">
     <ContentWidth>
         <h3 class="text-dark mb-10"> Common Questions & Our Answers</h3>
         <Accordian accordianProps={[
