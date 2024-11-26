@@ -42,8 +42,8 @@ onMount(() => {
 		
 	</div>
 	<div class="flex flex-row gap-6 ml-2 w-full" bind:this={ctaTrigger}>
-		<BracketButton class="text-mid" href="/">Contact Us</BracketButton>
-		<BracketButton class="text-mid" href="/">Learn More</BracketButton>
+		<BracketButton class="text-mid" href="/contact">Contact Us</BracketButton>
+		<BracketButton class="text-mid" href="/process">Learn More</BracketButton>
 	</div>
     </ContentWidth>
 </section>

@@ -183,7 +183,7 @@
 				{/each}
 			</div>
 			{:else}
-				<button on:click={()=>isOverlayVisible=true}><i class="text-[#998B6A] md:hidden fa-sharp fa-thin fa-bars fa-3x"/></button>
+				<button on:click={()=>isOverlayVisible=true}><i class="text-[#998B6A] md:hidden fa-sharp fa-bars fa-3x"/></button>
 			{/if}
 		</ContentWidth>
 	</nav>
