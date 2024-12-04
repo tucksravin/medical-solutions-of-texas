@@ -134,7 +134,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(4vw)"}
 			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in   {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
+				<a href="/" class="h-40 w-fit inline-block relative transition duration-300 ease-in   {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-40 {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{:else}
@@ -144,7 +144,7 @@
 				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
 				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
 			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class="h-full transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
+				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class=" transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
 			</div>
 		</OnMount>
 	{/if}
