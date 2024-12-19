@@ -124,35 +124,24 @@
 
 {#if isTransitioning||!isReady}
 	<div class="bg-[#140F09] z-40 fixed w-screen h-screen top-0 left-0 pointer-events-none" out:fade={{duration:700, delay:700}} ></div>
-{/if}
-
-{#if isReady}
-	{#if viewportWidth<1550}
-		<OnMount>
-			<div 
-				in:fade={{duration:700, delay:700}}
-				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
-				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(4vw)"}
-			>		
-				<a href="/" class="h-40 w-fit inline-block relative transition duration-300 ease-in   {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class=" {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
-			</div>
-		</OnMount>
-	{:else}
-		<OnMount>
-			<div 
-				in:fade={{duration:700, delay:700}}
-				class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700 {isTransitioning?"delay-100 pointer-events-none":""}" 
-				style={isTransitioning?"transform:translate( calc(50vw - 50%), calc(50vh - 50% - 16px)) scale(200%)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
-			>		
-				<a href="/" class=" w-fit inline-block relative transition duration-300 ease-in {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img class=" transition duration-[1700ms] {isTransitioning ? "pulse-always":""}" src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
-			</div>
-		</OnMount>
-	{/if}
-{:else}
 	<div transition:fade class="fixed w-2/5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
 		<img src={msotLogoSand} class="w-full h-full pulse-always" alt="msot logo"/>
 	</div>
+{:else}
+		<div 
+		transition:fade={{duration:700, delay:700}}
+		class="fixed z-40 top-4 left-0 w-40 transition-transform transform-gpu duration-700" 
+		style={ viewportWidth<1550?"transform:translate(4vw)":"transform:translate(calc( (100vw - 1440px) / 2 ))"}
+		>		
+		<a href="/" class="h-40 w-fit inline-block relative transition duration-300 ease-in   {!showNav&&!isTransitioning?"-translate-y-[112px]":""}"><img src={($page.data.title==="MSOT | Resources"||$page.data.title==="MSOT | Contact")&&!isTransitioning ? msotLogoKhaki : msotLogo } alt="msot logo"/></a>
+		</div>
+
 {/if}
+
+
+		
+
+
 	
 	
 {#if isOverlayVisible}
