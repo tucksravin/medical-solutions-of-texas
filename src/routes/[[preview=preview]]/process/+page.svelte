@@ -101,18 +101,18 @@
         <div bind:this={threeStepTrigger} class="w-full my-24 flex flex-col md:flex-row justify-between gap-8">
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100":"opacity-0"}">
 				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full" />
-				<h4 class="text-dark mt-4">01</h4>
-				<div class="text-dark mt-8 text-[24px]">We’ll isolate the best contracts and options for your company</div>
+				<h5 class="text-dark mt-4"><span class="text-[#998B6A]">01</span> Refine</h5>
+				<div class="text-dark mt-8 text-[24px] leading-normal">We’ll isolate the best contracts and options for your company</div>
 			</div>
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100 delay-[800ms]":"opacity-0"}">
 				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full" />
-				<h4 class="text-dark mt-4">02</h4>
-				<div class="text-dark mt-8 text-[24px]">We’ll guide you through the bureaucracy and paperwork, and get your application in</div>
+				<h5 class="text-dark mt-4"><span class="text-[#998B6A]">02</span> Guide</h5>
+				<div class="text-dark mt-8 text-[24px] leading-normal">We’ll guide you through the bureaucracy and paperwork, and get your application in</div>
 			</div>
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100 delay-[1800ms]":"opacity-0"}">
 				<div class="absolute top-0 left-0 h-[2px] bg-dark w-full" />
-				<h4 class="text-dark mt-4">03</h4>
-				<div class="text-dark mt-8 text-[24px]">We’ll get you in the room with the right people to help you build further relationship</div>
+				<h5 class="text-dark mt-4"><span class="text-[#998B6A]">03</span> Connect</h5>
+				<div class="text-dark mt-8 text-[24px] leading-normal">We’ll get you in the room with the right people to help you build further relationship</div>
 
 			</div>
 		</div>

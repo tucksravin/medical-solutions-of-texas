@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import dots from "$lib/assets/dots.svg"
+    import dots from "$lib/assets/dots_square.png"
     import placeholder from "$lib/assets/images/profile_placeholder.png"
     import { browser } from "$app/environment";
   import { fly } from "svelte/transition";
@@ -39,10 +39,7 @@
 
 <button class="w-64 md:w-96 lg:w-72 xl:w-96 opacity-90 hover:opacity-100 {noclick?"pointer-events-none":""}" on:click={toggleOverlay}>
     <div class="w-full aspect-square relative overflow-hidden">
-        <img alt="dots" src={dots} class="h-3/5 absolute top-0 right-0" />
-        <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 left-0" />
-        <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 right-0" />
-        <img alt="dots" src={dots} class="h-3/5 absolute top-0 left-0" />
+        <img alt="dots" src={dots} class="w-full h-full absolute bottom-0 right-0" />
         <img alt="albert turgon" src={headshot} class="w-full h-full object-cover absolute" />
     </div>
     <div class="w-full h-[2px] bg-light mt-6" />
@@ -55,10 +52,7 @@
         <ContentWidth class="flex flex-col justify-center items-center lg:items-start lg:flex-row lg:justify-between lg:aspect-video py-16 relative">
             <div class="w-64 md:w-96 lg:w-72 xl:w-96">
                 <div class="w-full aspect-square relative overflow-hidden">
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 left-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 right-0" />
-                    <img alt="dots" src={dots} class="h-3/5 absolute top-0 left-0" />
+                    <img alt="dots" src={dots} class="w-full h-full absolute bottom-0 right-0" />
                     <img alt="albert turgon" src={headshot} class="w-full h-full object-cover absolute" />
                 </div>
                 <div class="w-full h-[2px] bg-light mt-6" />

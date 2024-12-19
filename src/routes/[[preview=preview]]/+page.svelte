@@ -175,6 +175,16 @@ export let data:any;
 		background-blend-mode: saturation;
 		opacity: 0.1;
 	}
+
+	.support-text h3{
+		font-feature-settings: 'liga' off, 'clig' off;
+		font-family: "rigid-square";
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 60px; /* 120% */
+		text-transform: uppercase;
+	}
 </style>
 
 <svelte:head><title>{data.title} </title></svelte:head>
@@ -272,26 +282,28 @@ export let data:any;
 	<img src={viewportWidth>768 ? timeline1 : timeline1_mobile} alt="timelines" class="w-full" />
 </section>
 <section class="bg-mid py-20" bind:this={painTrigger}>
+	<ContentWidth class="flex flex-col mb-10 md:mb-20 md:flex-row relative">
+		<h3 class="text-dark">We Know What to Do</h3>
+	</ContentWidth>
 	<ContentWidth class="flex flex-col md:flex-row relative">
-		{#if !isPainActive}
-			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full" transition:fade={{duration:3000}} />
-		{/if}
+		
+			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-dark to-transparent  w-full"  />
+		
 	
 		{#if isPainActive}
 			<div class="absolute top-0 left-0 h-[2px] bg-gradient-to-r transition-all from-transparent to-dark  w-full" transition:fade={{duration:3000}} />
 		{/if}
 		<div class="md:w-1/2 mt-6 transition-opacity duration-1000 ease-out {isPainActive?"":"opacity-0"}">
-			<div class="duration-1000 ease-out {isPainActive?"opacity-25 delay-[1400ms]":""}">
-				<h4 class="text-dark mb-10 md:mb-20 duration-1000 ease-out {isPainActive?"opacity-100":""}">We Know Your Pain </h4>
-				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100":"opacity-0"}">government <br/> contracts are</h3>
+			
+			<div class="duration-1000 ease-out {isPainActive?"opacity-25 delay-[1400ms]":""} support-text">
+				<h4 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100":""}">Government Contracts Are</h4>
 				<h3 class="text-dark duration-1000 ease-out md:mt-6  {isPainActive?"opacity-100 delay-[350ms]":"opacity-0"}">opaque</h3>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[700ms]":"opacity-0"}">confusing</h3>
 				<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1050ms]":"opacity-0"}">inaccessible</h3>
 			</div>
 		</div>
-		<div class="md:w-1/2 mt-20 md:mt-6">
-			<h4 class="text-dark mb-10 md:mb-20  duration-1000 ease-out {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">We Know What To Do</h4>
-			<h3 class="text-dark duration-1000 ease-out  {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">with us <br/> You’ll get</h3>
+		<div class="md:w-1/2 mt-6 support-text">
+			<h4 class="text-dark   duration-1000 ease-out {isPainActive?"opacity-100 delay-[1750ms]":"opacity-0"}">What You’ll get With MSOT</h4>
 			<h3 class="text-dark duration-1000 ease-out md:mt-6 {isPainActive?"opacity-100 delay-[2100ms]":"opacity-0"}">transparency</h3>
 			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100 delay-[2450ms] ":"opacity-0"}">understanding</h3>
 			<h3 class="text-dark duration-1000 ease-out {isPainActive?"opacity-100  delay-[2800ms]  ":"opacity-0"}">access</h3>
