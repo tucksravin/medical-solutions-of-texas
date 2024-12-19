@@ -34,9 +34,10 @@
     export let title:string;
     export let headshot = placeholder; 
     export let bio = name+" is the "+ title + " at MSOT.";
+    export let noclick = false;
 </script>
 
-<button class="w-64 md:w-96 lg:w-72 xl:w-96 opacity-90 hover:opacity-100" on:click={toggleOverlay}>
+<button class="w-64 md:w-96 lg:w-72 xl:w-96 opacity-90 hover:opacity-100 {noclick?"pointer-events-none":""}" on:click={toggleOverlay}>
     <div class="w-full aspect-square relative overflow-hidden">
         <img alt="dots" src={dots} class="h-3/5 absolute top-0 right-0" />
         <img alt="dots" src={dots} class="h-3/5 absolute bottom-0 left-0" />

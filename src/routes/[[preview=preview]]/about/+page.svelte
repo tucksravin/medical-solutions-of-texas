@@ -7,6 +7,13 @@
     import dots from "$lib/assets/dots.svg"
     import patch from "$lib/assets/images/about/patch.jpg"
     import placeholder from "$lib/assets/images/profile_placeholder.png"
+    import albert from "$lib/assets/images/generic_headshots/albert.png"
+    import tim from "$lib/assets/images/generic_headshots/tim.png"
+    import kathy from "$lib/assets/images/generic_headshots/kathy.png"
+    import kylene from "$lib/assets/images/generic_headshots/kylene.png"
+    import edward from "$lib/assets/images/generic_headshots/edward.png"
+    import holden from "$lib/assets/images/generic_headshots/holden.png"
+
   import Accordian from "$lib/components/FullWidth/Accordian.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import TeamWithPopup from "$lib/components/FullWidth/TeamWithPopup.svelte";
@@ -17,42 +24,42 @@
     {
         name:"Albert Turgon",
         title:"Chief Executive Officer",
-        image:placeholder,
+        image:albert,
         bio:LOREM
 
     },
     {
         name:"Tim Watson",
         title:"Chief Operating Officer",
-        image:placeholder,
+        image:tim,
         bio:LOREM
 
     },
     {
         name:"Kylene Carse",
         title:"Chief Financial Officer",
-        image:placeholder,
+        image:kylene,
         bio:LOREM
 
     },
     {
         name:"Edward Anderson, MD",
         title:"Founder",
-        image:placeholder,
+        image:edward,
         bio:LOREM
 
     },
     {
         name:"Holden Calhoun",
         title:"Director of Sales",
-        image:placeholder,
+        image:holden,
         bio:LOREM
 
     },
     {
         name:"Kathy Castro",
         title:"Customer Support",
-        image:placeholder,
+        image:kathy,
         bio:LOREM
 
     },
@@ -149,7 +156,7 @@
 
         <div class="w-full flex flex-col lg:flex-row gap-y-20 items-center justify-between flex-wrap">
             {#each teamArray as person}
-            <TeamWithPopup name={person.name} title={person.title} headshot={person.image} bio={person.bio} />
+            <TeamWithPopup name={person.name} title={person.title} headshot={person.image} bio={person.bio} noclick/>
             {/each}
            
         </div>
