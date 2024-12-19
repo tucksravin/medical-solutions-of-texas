@@ -40,7 +40,7 @@
 <button class="w-64 md:w-96 lg:w-72 xl:w-96 opacity-90 hover:opacity-100 {noclick?"pointer-events-none":""}" on:click={toggleOverlay}>
     <div class="w-full aspect-square relative overflow-hidden">
         <img alt="dots" src={dots} class="w-full h-full absolute bottom-0 right-0" />
-        <img alt="albert turgon" src={headshot} class="w-full h-full object-cover absolute" />
+        <img alt={name} src={headshot} class="w-[96.5%] h-[96.5%] object-cover absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
     </div>
     <div class="w-full h-[2px] bg-light mt-6" />
     <h5 class="text-light mt-4 text-left">{title}</h5>
