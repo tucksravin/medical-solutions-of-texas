@@ -111,9 +111,18 @@
         <h3 class="text-dark mb-8">What We Do For You</h3>
         <Accordian accordianProps={[
             {label:"Sign Dapas", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."},
-            {label:"Get Listed in the E-CAT", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."},
-            {label:"Win FSS Contracts", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."},
-            {label:"Figure out where to start", content:"Distribution and pricing agreements allow you to set prices and gain direct access to the military market."}
+            {label:"Get Listed in the E-CAT", content:"Getting listed in an e-catalog gives you the advantage of increased reach, better customer engagement, the ability to collect valuable customer data, and a more streamlined way to showcase products with updated information readily available, ultimately boosting sales potential."},
+            {label:"Win FSS Contracts", content:`You'll have access to be awarded to the the nine VA FSS programs: 
+65 I B Drugs, Pharmaceuticals, & Hematology Related Products
+65 II A    Medical Equipment & Supplies
+65 II C    Dental Equipment & Supplies
+65 II F    Patient Mobility Devices
+65 V A    X-Ray Equipment & Supplies
+65 VII    Invitro Diagnostics, Reagents, Test Kits, & Test Sets
+66 III    Cost-Per-Test, Clinical Laboratory Analyzers
+621 I    Professional & Allied Healthcare Staffing Services
+621 II    Medical Laboratory Testing & Analysis Services`},
+            {label:"Figure out where to start", content:"With our team's combined experience in medical sales and government contracting, we're the perfect partner to point you in the right direction. Let's get started."}
         ]} />
     <div class="my-44 flex flex-col md:flex-row justify-start items-start w-full">
         <div class="relative w-full md:w-[40%] h-fit mr-12 xl:mr-[20%]">
