@@ -94,7 +94,7 @@
 
 </ContentWidth>
 
-<section class="w-full py-20 bg-mid" >
+<!-- <section class="w-full py-20 bg-mid" >
 	<ContentWidth class="items-start">
         <h5 class="text-dark mb-5" style="font-family:'barlow-condensed', sans-serif;">Track Record: Our Best Projects</h5>
 		<div class="w-full aspect-[5/2] bg-light relative overflow-hidden">
@@ -112,7 +112,7 @@
         <div class="mt-5 sm:w-1/2 text-dark text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</div>
 	
 	</ContentWidth>
-</section>
+</section> -->
 <section class="w-full py-32 bg-light">
     <ContentWidth>
         <h3 class="text-dark mb-8">What We Do For You</h3>
