@@ -21,13 +21,13 @@
     import aurora from "$lib/assets/images/partners/partners_duotone/aurora.png"
     import axial from "$lib/assets/images/partners/partners_duotone/axial_biologics_logo.png"
     import bridge from "$lib/assets/images/partners/partners_duotone/bonebridge.png"
-
+    import signus from "$lib/assets/images/partners/partners_duotone/SIGNUS.png"
     import cibolo from "$lib/assets/images/partners/partners_duotone/cibolo-spine_medium duo.png"
 
 
     import Footer from "$lib/components/Footer.svelte";
 
-  const imageArray = [revogenDuo, cibolo, caerus, aegis, leith, centinel, spinal,edge, ctl, fourWeb, difusion, metalogix, expanding, aurora, axial, bridge]
+  const imageArray = [revogenDuo, cibolo, caerus, aegis, leith, centinel, spinal,edge, ctl, fourWeb, difusion, metalogix, expanding, aurora, axial, bridge, signus]
 
   
 </script>
