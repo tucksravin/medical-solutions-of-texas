@@ -9,8 +9,23 @@
     let submit = () => form.submit();
     let form:HTMLFormElement;
 
+    type SelectOption = {
+  index?: number;
+  value?: string;
+  label?: string;
+};
 
-    let selectValue="";
+
+    let selectValue:SelectOption = {
+        index: 0,
+        value: "Select Interest",
+        label: "Select Interest"
+    };
+
+    $: {
+        selectValue;
+        console.log(selectValue)
+    }
 
 </script>
 
@@ -25,7 +40,7 @@
             </div>
         </div>
         <StyledSingleSelect placeholder="Select Interest" items={PRODUCTS} bind:value={selectValue}/>
-        <input name="select" type="text" bind:value={selectValue} hidden />
+        <input name="select" type="text" bind:value={selectValue.value} hidden />
 
         <textarea class="border-[1px] rounded-[3px] text-dark border-light h-48 pl-4 pt-2" placeholder="Your Message" name="message" />
 

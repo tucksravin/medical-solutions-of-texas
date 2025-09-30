@@ -2,9 +2,15 @@
     import Select from 'svelte-select'
     import dropdownArrow from "$lib/assets/icons/dropdown-arrow-light.svg"
 
+        type SelectOption = {
+  index?: number;
+  value?: string;
+  label?: string;
+};
+
     export let items:string[]|{label:string,value:string}[];
-    export let value="";
-    export let placeholder="";
+    export let value:SelectOption;
+    export let placeholder:string|undefined;
 
 
 
