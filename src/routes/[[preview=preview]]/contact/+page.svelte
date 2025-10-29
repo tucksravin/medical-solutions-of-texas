@@ -13,10 +13,10 @@ import Footer from "$lib/components/Footer.svelte";
             <div class="mt-12 lg:mt-0 w-full lg:w-1/2 flex flex-col gap-8 text-dark text-[24px] leading-normal">
                 <div>We’d love to hear from you.</div>
                 <div>
-                    1583 Thousand Oaks Dr. <br/> San Antonio, TX 78232
+                   4903 Golden Quail, Suite 120 <br/> San Antonio, TX 78240
                 </div>
                 <div> 
-                    Phone: 210.744.9686 <br/>
+                    Phone: 833.307.4418 <br/>
                     Fax: 210.758.5466 <br/>
                     info@MedicalSolutionsofTX.com
                 </div>
