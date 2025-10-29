@@ -17,7 +17,6 @@ import Footer from "$lib/components/Footer.svelte";
                 </div>
                 <div> 
                     Phone: 833.307.4418 <br/>
-                    Fax: 210.758.5466 <br/>
                     info@MedicalSolutionsofTX.com
                 </div>
 
