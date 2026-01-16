@@ -30,57 +30,50 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
 
     </ContentWidth>
 </section>
-<section class="bg-mid pt-24 pointer-events-none">
+<section class="bg-mid pt-24">
     <ContentWidth class="flex flex-col md:flex-row justify-between py-10">
         <div class="md:w-[calc(33%-20px)] flex flex-col  mt-12 md:mt-0 ">
-            <h3 class="text-dark mb-14">Supplier 1</h3>
+            <h3 class="text-dark mb-14">Catalogs</h3>
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
-                <a href="/" class="bump">
-                    <h4 class="text-dark hover:opacity-90 transition-opacity">2024 Catalog</h4>
+                <a href="/pdfs/MSOT_FSSCatalog.pdf" class="bump" target="_blank" rel="noopener noreferrer">
+                    <h4 class="text-dark hover:opacity-90 transition-opacity">FSS Catalog</h4>
                 </a>
-                <a href="/" class="negative-bump">
+                <a href="/pdfs/MSOT_FSSCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
                     <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
                 </a>
             </div>
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
-                <a href="/" class="bump">
-                    <h4 class="text-dark hover:opacity-90 transition-opacity">Technique Guide</h4>
+                <a href="/pdfs/MSOT_CommercialCatalog.pdf" class="bump" target="_blank" rel="noopener noreferrer">
+                    <h4 class="text-dark hover:opacity-90 transition-opacity">Commercial Catalog</h4>
                 </a>
-                <a href="/" class="negative-bump">
+                <a href="/pdfs/MSOT_CommercialCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
                     <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
+                </a>
+            </div>
+            
+            
+        </div>
+        <div class="md:w-[calc(33%-20px)] flex flex-col  mt-12 md:mt-0 pointer-events-none">
+            <h3 class="text-dark mb-14">Suppliers</h3>
+            <div class="text-dark/65 w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
+                <a href="/pdfs/MSOT_CommercialCatalog.pdf" class="bump" target="_blank" rel="noopener noreferrer">
+                    <h4 class=" hover:opacity-90 transition-opacity">Catalog</h4>
+                </a>
+                <a href="/pdfs/MSOT_CommercialCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
+                    <i class=" opacity-0 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
                 </a>
             </div>
             
         </div>
-        <div class="md:w-[calc(33%-20px)] flex flex-col  mt-12 md:mt-0">
-            <h3 class="text-dark mb-14">Supplier 2</h3>
-            <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
-                <a href="/" class="bump">
-                    <h4 class="text-dark hover:opacity-90 transition-opacity">2024 Catalog</h4>
-                </a>
-                <a href="/" class="negative-bump">
-                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
-                </a>
-            </div>
-            <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
-                <a href="/" class="bump">
-                    <h4 class="text-dark hover:opacity-90 transition-opacity">Technique Guide</h4>
-                </a>
-                <a href="/" class="negative-bump">
-                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
-                </a>
-            </div>
+        <div class="md:w-[calc(33%-20px)] flex flex-col mt-12 md:mt-0 pointer-events-none">
+            <h3 class="text-dark mb-14">Technique Guides</h3>
             
-        </div>
-        <div class="md:w-[calc(33%-20px)] flex flex-col mt-12 md:mt-0">
-            <h3 class="text-dark mb-14">Technique Guide</h3>
-            
-            <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
-                <a href="/" class="bump">
-                    <h4 class="text-dark hover:opacity-90 transition-opacity">Technique Guide</h4>
+            <div class="text-dark/65 w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
+                <a href="/" class="bump" target="_blank" rel="noopener noreferrer">
+                    <h4 class=" hover:opacity-90 transition-opacity">Technique Guide</h4>
                 </a>
-                <a href="/" class="negative-bump">
-                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
+                <a href="/" class="negative-bump" target="_blank" rel="noopener noreferrer">
+                    <i class=" opacity-0 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
                 </a>
             </div>
             
