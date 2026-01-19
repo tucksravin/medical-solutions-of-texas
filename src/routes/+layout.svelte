@@ -30,7 +30,7 @@
             href:"/process"
         },
         {
-            label:"Reps",
+            label:"Resources",
             href:"/resources"
         },
         {

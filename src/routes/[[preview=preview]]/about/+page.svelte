@@ -30,7 +30,7 @@
     },
     {
         name:"Tim Watson",
-        title:"Chief Operating Officer",
+        title:"Chief Commercial Officer",
         image:tim,
         bio:LOREM
 
@@ -50,7 +50,7 @@
 
     },
     {
-        name:"Holden Calhoun",
+        name:"Courtney Alexander",
         title:"Director of Sales",
         image:holden,
         bio:LOREM
