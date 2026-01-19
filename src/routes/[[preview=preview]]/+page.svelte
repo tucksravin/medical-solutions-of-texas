@@ -3,7 +3,7 @@
 import usFlag from "$lib/assets/icons/logos/usFlag.svg"
 import txFlag from "$lib/assets/icons/logos/txFlag.svg"
 import sdvosbLogo from "$lib/assets/icons/logos/sdvosb-white.svg";
-import revogenLogo from "$lib/assets/icons/logos/revogenLogo.png" 
+import revogenLogo from "$lib/assets/icons/logos/revogenLogo.svg" 
 import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
 
 //images
@@ -25,7 +25,6 @@ import ctaImageMobile from "$lib/assets/images/home/doctor_mobile.jpg"
 
   //modules
   import { onMount } from "svelte";
-  import { writable } from "svelte/store";
   import { fade } from "svelte/transition";
   import BracketButton from "$lib/components/Buttons/BracketButton.svelte";
   
@@ -38,9 +37,6 @@ let isMounted = false;
 let showIntro = true;
 let showSubtitle = false;
 
-let middleTitleLine:HTMLElement |  null;
-
-let middleTitleLineWidth = writable(3000);
 
 let weGetIndex = 0;
 
@@ -76,16 +72,6 @@ let isthreeStepActive = false;
 let ctaTrigger:HTMLElement | null;
 let isCtaActive = false;
 
-
-const handleResize = () => {
-  if (middleTitleLine) {
-    const width = middleTitleLine.getBoundingClientRect().width;
-    middleTitleLineWidth.set(width || 3000);
-    console.log("Middle title line width:", width);
-  } else {
-    console.log("Middle title line element not found");
-  }
-}
 
 const handleScroll = () => {
 	if(weGetTrigger){
@@ -142,14 +128,7 @@ onMount(() => {
 
 	isMounted = true;
 
-    window.addEventListener('resize', handleResize);
 	window.addEventListener('scroll', handleScroll);
-
-	
-	setTimeout(()=>{
-		handleResize()
-	}, 20)
-
 
 	setTimeout(()=>{
 		showSubtitle = true;
@@ -160,7 +139,6 @@ onMount(() => {
 
 
   return () => {
-    window.removeEventListener('resize', handleResize);
 	isMounted = false;
   };
 });
