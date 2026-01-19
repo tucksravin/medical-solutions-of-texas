@@ -35,7 +35,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
             <h3 class="text-dark mb-14">Catalogs</h3>
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
                 <a href="/pdfs/MSOT_FSSCatalog.pdf" class="bump" target="_blank" rel="noopener noreferrer">
-                    <h4 class="text-dark hover:opacity-90 transition-opacity">FSS Catalog</h4>
+                    <h4 class="text-dark hover:opacity-90 transition-opacity">FSS Catalog (Contract # 36F79725D0204)</h4>
                 </a>
                 <a href="/pdfs/MSOT_FSSCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
                     <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
