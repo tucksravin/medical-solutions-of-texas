@@ -308,7 +308,7 @@ export let data:any;
 			<h4 class="text-dark absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Our Partner</h4>
 			
 			<p class="text-dark text-center mx-5 text-[24px]">“MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.”</p>
-			<img src={revogenLogo} alt="service disabled veteran owned small business logo" class="h-32"/>
+			<img src={revogenLogo} alt="service disabled veteran owned small business logo" class="h-32 max-w-[350px]"/>
 		</div>
 	</div>
 

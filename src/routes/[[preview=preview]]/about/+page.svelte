@@ -52,7 +52,7 @@
     },
     {
         name:"Courtney Alexander",
-        title:"Director of Sales",
+        title:"Government Accounts Coordinator",
         image:courtney,
         bio:LOREM
 
