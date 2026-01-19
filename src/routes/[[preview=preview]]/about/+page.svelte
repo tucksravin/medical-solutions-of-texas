@@ -12,7 +12,8 @@
     import kathy from "$lib/assets/images/generic_headshots/kathy.png"
     import kylene from "$lib/assets/images/generic_headshots/kylene.png"
     import edward from "$lib/assets/images/generic_headshots/edward.png"
-    import holden from "$lib/assets/images/generic_headshots/holden.png"
+    import courtney from "$lib/assets/images/generic_headshots/courtney.png"
+
 
   import Accordian from "$lib/components/FullWidth/Accordian.svelte";
   import Footer from "$lib/components/Footer.svelte";
@@ -52,7 +53,7 @@
     {
         name:"Courtney Alexander",
         title:"Director of Sales",
-        image:holden,
+        image:courtney,
         bio:LOREM
 
     },
