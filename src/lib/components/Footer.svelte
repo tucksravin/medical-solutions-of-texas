@@ -1,7 +1,7 @@
 <script lang="ts">
     import ContentWidth from "./ContentWidth/ContentWidth.svelte";
     import BracketButton from "./Buttons/BracketButton.svelte";
-    import sdvosbLogo from "$lib/assets/icons/logos/sdvosb-white.svg"
+    import vosbLogo from "$lib/assets/icons/logos/vosb_white.svg"
     import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
     import { onMount } from "svelte";
 
@@ -58,7 +58,7 @@ onMount(() => {
 			{/if}
 		
 		</div>
-		<img src={sdvosbLogo} alt="sdvosb logo" class="h-16 md:h-24"/>
+		<img src={vosbLogo} alt="vosb logo" class="h-16 md:h-24"/>
 	</ContentWidth>
 	{#if viewportWidth <= 560}
 			<div class="label text-white w-full text-center px-2">{"©" + new Date().getFullYear() + " - Medical Solutions of Texas"}  <br />   All Rights Reserved</div>

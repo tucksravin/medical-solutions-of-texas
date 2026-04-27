@@ -2,7 +2,7 @@
 //icons
 import usFlag from "$lib/assets/icons/logos/usFlag.svg"
 import txFlag from "$lib/assets/icons/logos/txFlag.svg"
-import sdvosbLogo from "$lib/assets/icons/logos/sdvosb-white.svg";
+import vosbLogo from "$lib/assets/icons/logos/vosb_white.svg";
 import revogenLogo from "$lib/assets/icons/logos/revogenLogo.svg" 
 import msotLogo from "$lib/assets/icons/logos/msot_logo.svg"
 
@@ -208,10 +208,10 @@ export let data:any;
 
 			<div class="flex flex-row items-center justify-center gap-5">
 				<img src={usFlag} alt="us flag" class="opacity-50"/>
-				<img src={sdvosbLogo} alt="service disabled veteran owned small business logo" />
+				<img src={vosbLogo} alt="veteran owned small business logo" class="opacity-90 h-40" />
 				<img src={txFlag} alt="texas flag" class="opacity-50"/>
 			</div>
-			<div class="text-white text-center leading-normal md:text-[24px]">Our expertise, SDVOSB (Service Disabled Veteran Owned Small Business) status, and deep network of relationships allows us to offer solutions where others hit roadblocks.</div>
+			<div class="text-white text-center leading-normal md:text-[24px]">Our expertise, VOSB (Veteran Owned Small Business) status, and deep network of relationships allows us to offer solutions where others hit roadblocks.</div>
 			<div class="flex flex-col md:flex-row justify-center items-center gap-8">
 				<BracketButton href="/contact" class="text-mid button-text">Contact Us</BracketButton>
 				<BracketButton href="/pdfs/MSOT_Capabilities.pdf" class="text-mid button-text">Capabilities Statement</BracketButton>
@@ -308,7 +308,7 @@ export let data:any;
 			<h4 class="text-dark absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Our Partner</h4>
 			
 			<p class="text-dark text-center mx-5 text-[24px]">“MSOT made the process of getting our product into the DoD system easier than we ever thought possible. They're an invaluable partnership and wealth of knowledge when it comes to selling to the DoD and VA hospital systems.”</p>
-			<img src={revogenLogo} alt="service disabled veteran owned small business logo" class="h-32 max-w-[350px]"/>
+			<img src={revogenLogo} alt="veteran owned small business logo" class="h-32 max-w-[350px]"/>
 		</div>
 	</div>
 
@@ -366,7 +366,7 @@ export let data:any;
 			{/if}
 		
 		</div>
-		<img src={sdvosbLogo} alt="sdvosb logo" class="h-16 md:h-24"/>
+		<img src={vosbLogo} alt="vosb logo" class="h-16 md:h-24"/>
 	</ContentWidth>
 	{#if viewportWidth <= 560}
 			<div class="label text-white w-full text-center px-2">{"©" + new Date().getFullYear() + " - Medical Solutions of Texas"}  <br />   All Rights Reserved</div>
