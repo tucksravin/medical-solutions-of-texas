@@ -22,9 +22,16 @@
   const LOREM = "Lorem ipsum odor amet, consectetuer adipiscing elit. Maecenas felis feugiat nulla nisl proin? Vel ultricies senectus faucibus morbi vulputate. Facilisis natoque duis maecenas netus vel arcu elementum. Posuere facilisi gravida malesuada potenti vel taciti blandit. Integer nibh diam diam lectus nullam varius venenatis. Habitant quis pellentesque vulputate hac amet. Sodales euismod purus vehicula scelerisque cursus facilisi. Torquent quisque nibh ante duis nisl. Ridiculus ultricies natoque eros eget phasellus odio enim. Lectus adipiscing tristique tempor convallis ridiculus eleifend. Vehicula accumsan enim augue porta sodales tortor risus. Consectetur vestibulum laoreet ullamcorper quisque potenti sit erat libero. Sodales mattis cursus ex amet primis hac ligula. Vulputate mi luctus est euismod tortor tincidunt. Porttitor in curabitur aliquam, rhoncus eget nam vestibulum fringilla. Tincidunt ante ligula euismod fringilla lectus. Fusce habitant fringilla porta; sit imperdiet sit ultrices ipsum. Leo euismod lacinia placerat suscipit congue. Gravida phasellus diam facilisi habitasse; risus duis fusce?"
 
   const teamArray = [
+     {
+        name:"David Lange",
+        title:"President",
+        image:tim,
+        bio:LOREM
+
+    },
     {
         name:"Albert Turgon",
-        title:"Chief Executive Officer",
+        title:"Chief Operating Officer",
         image:albert,
         bio:LOREM
 
@@ -44,8 +51,8 @@
 
     },
     {
-        name:"Edward Anderson, MD",
-        title:"Founder",
+        name:"Jon Hood",
+        title:"CEO",
         image:edward,
         bio:LOREM
 
@@ -64,6 +71,7 @@
         bio:LOREM
 
     },
+    
   ]
 </script>
 
