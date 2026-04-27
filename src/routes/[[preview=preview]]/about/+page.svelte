@@ -50,13 +50,7 @@
         bio:LOREM
 
     },
-    {
-        name:"Jon Hood",
-        title:"CEO",
-        image:edward,
-        bio:LOREM
 
-    },
     {
         name:"Courtney Alexander",
         title:"Government Accounts Coordinator",
@@ -71,6 +65,13 @@
         bio:LOREM
 
     },
+        {
+        name:"Jon Hood",
+        title:"CEO",
+        image:edward,
+        bio:LOREM
+
+    }
     
   ]
 </script>
@@ -165,7 +166,9 @@
 
         <div class="w-full flex flex-col lg:flex-row gap-y-20 items-center justify-between flex-wrap">
             {#each teamArray as person}
-            <TeamWithPopup name={person.name} title={person.title} headshot={person.image} bio={person.bio} noclick/>
+            <div class="last:mx-auto">
+                <TeamWithPopup name={person.name} title={person.title} headshot={person.image} bio={person.bio} noclick/>
+            </div>
             {/each}
            
         </div>
