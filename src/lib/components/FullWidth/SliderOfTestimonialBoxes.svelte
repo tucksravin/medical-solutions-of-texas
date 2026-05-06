@@ -1,6 +1,6 @@
 <script lang='ts'>
     import { onMount } from "svelte";
-    import { swipe } from "svelte-gestures";
+    import { createSwipeAction } from "$utils/swipeAction";
     import TestimonialBox from "./TestimonialBox.svelte";
     import type { ComponentProps } from "svelte";
     import chevronLeft from "../../assets/icons/chevron-left.svg";
@@ -62,13 +62,10 @@
         console.log(sliderIndex);
     }
 
-    const handleSwipe = (e:CustomEvent<{ direction: "left" | "top" | "right" | "bottom"; target: EventTarget; }>) => {
-      if(e.detail.direction==="left") 
-        slideLeft();
-
-        if(e.detail.direction==="right") 
-        slideRight();
-    }
+    const swipe = createSwipeAction((e) => {
+      if (e.detail.direction === "left") slideLeft();
+      if (e.detail.direction === "right") slideRight();
+    });
   
     onMount(() => {
       sliderInterval = setInterval(() => slideLeft(), SLIDER_INTERVAL_IN_MS);
@@ -77,7 +74,7 @@
     const quintupledPropsArray = [...testimonialBoxPropsArray, ...testimonialBoxPropsArray, ...testimonialBoxPropsArray, ...testimonialBoxPropsArray, ...testimonialBoxPropsArray];
   </script>
   
-  <div use:swipe onswipe={handleSwipe} class="w-full h-full relative overflow-hidden">
+  <div use:swipe class="w-full h-full relative overflow-hidden">
     <div class="flex flex-row flex-nowrap  {isSlideAnimated ? 'transition-transform duration-500 ease-in-out' : ''}" style="width: {quintupledPropsArray.length * 100}%; transform: translateX(-{(sliderIndex+testimonialBoxPropsArray.length) * sliderWidth}%);">
       {#each quintupledPropsArray as testimonialBoxProps}
         <div class="h-full z-0" style="width: {sliderWidth}%;">

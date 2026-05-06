@@ -3,6 +3,7 @@
     import placeholder from "$lib/assets/images/profile_placeholder.png"
     import { browser } from "$app/environment";
   import { fly } from "svelte/transition";
+  import { X } from "@lucide/svelte";
   import ContentWidth from "../ContentWidth/ContentWidth.svelte";
 
     let showOverlay = $state(false);
@@ -72,7 +73,9 @@
             <div class="w-full lg:w-2/3 mt-12 lg:mt-0 lg:px-8">
                 {bio}
             </div>
-            <button onclick={toggleOverlay} class="absolute top-0 right-0"><i class="fa-sharp fa-thin fa-close fa-2xl transition text-light hover:text-white"></i></button>
+            <button onclick={toggleOverlay} class="absolute top-0 right-0" aria-label="Close team member detail">
+                <X size={32} strokeWidth={1} class="transition text-light hover:text-white" />
+            </button>
         </ContentWidth>
     </div>
 {/if}

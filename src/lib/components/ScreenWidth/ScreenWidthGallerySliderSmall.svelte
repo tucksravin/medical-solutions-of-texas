@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { swipe } from "svelte-gestures";
+	import { ChevronLeft, ChevronRight } from "@lucide/svelte";
+	import { createSwipeAction } from "$utils/swipeAction";
 	import placeholder from "../../assets/images/background_placeholder.svg";
 	import FourByThreeImage from "../FullWidth/FourByThreeImage.svelte";
 
@@ -49,12 +50,10 @@
 		if (sliderIndex < 0) resetSliderToEnd();
 	};
 
-	const handleSwipe = (
-		e: CustomEvent<{ direction: "left" | "top" | "right" | "bottom"; target: EventTarget }>
-	) => {
+	const swipe = createSwipeAction((e) => {
 		if (e.detail.direction === "left") slideRight();
 		if (e.detail.direction === "right") slideLeft();
-	};
+	});
 
 	onMount(() => {
 		sliderInterval = setInterval(() => slideLeft(), SLIDER_INTERVAL_IN_MS);
@@ -65,7 +64,7 @@
 </script>
 
 <section class="pb-32 {klass}">
-	<div use:swipe onswipe={handleSwipe} class="h-[320px] py-2 relative">
+	<div use:swipe class="h-[320px] py-2 relative">
 		<div
 			class="h-full flex flex-row flex-nowrap {isSlideAnimated
 				? 'transition-transform duration-[2000ms]'
@@ -87,14 +86,14 @@
 				aria-label="Previous slide"
 				class="absolute left-0 h-[320px] bg-gradient-to-r from-white via-[#ffffffe0] to-transparent w-12 md:w-24 flex align-middle justify-center items-center cursor-pointer transition-all duration-500 bump"
 			>
-				<i class="fa-sharp fa-chevron-left fa-xl text-dark"></i>
+				<ChevronLeft size={24} class="text-dark" />
 			</button>
 			<button
 				onclick={slideRight}
 				aria-label="Next slide"
 				class="absolute right-0 h-[320px] w-12 md:w-24 flex bg-gradient-to-l from-white via-[#ffffffe0] to-transparent align-middle cursor-pointer transition-all duration-500 justify-center items-center bump"
 			>
-				<i class="fa-sharp fa-chevron-right fa-xl text-dark"></i>
+				<ChevronRight size={24} class="text-dark" />
 			</button>
 		</div>
 	</div>

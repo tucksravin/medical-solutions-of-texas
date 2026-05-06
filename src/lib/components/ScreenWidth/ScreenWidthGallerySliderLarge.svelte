@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { swipe } from "svelte-gestures";
+	import { createSwipeAction } from "$utils/swipeAction";
 	import placeholder from "../../assets/images/image_placeholder.svg";
 	import ContentWidth from "../ContentWidth/ContentWidth.svelte";
 	import FourByThreeImage from "../FullWidth/FourByThreeImage.svelte";
@@ -82,12 +82,10 @@
 		sliderInterval = setInterval(() => slideRight(), SLIDER_INTERVAL_IN_MS);
 	};
 
-	const handleSwipe = (
-		e: CustomEvent<{ direction: "left" | "top" | "right" | "bottom"; target: EventTarget }>
-	) => {
+	const swipe = createSwipeAction((e) => {
 		if (e.detail.direction === "left") slideRight();
 		if (e.detail.direction === "right") slideLeft();
-	};
+	});
 
 	onMount(() => {
 		sliderInterval = setInterval(() => slideRight(), SLIDER_INTERVAL_IN_MS);
@@ -101,7 +99,7 @@
 <svelte:window bind:innerWidth />
 
 <section class="pb-32 {klass}">
-	<div use:swipe onswipe={handleSwipe} class="h-py-2 relative" style="height:{imageWidth * 0.95}px;">
+	<div use:swipe class="h-py-2 relative" style="height:{imageWidth * 0.95}px;">
 		<div
 			class="h-full flex flex-row flex-nowrap {isSlideAnimated
 				? 'transition-transform duration-[2000ms]'

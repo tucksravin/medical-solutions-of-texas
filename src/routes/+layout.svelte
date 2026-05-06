@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
+	import { Menu, X } from "@lucide/svelte";
 	import { PrismicPreview } from "@prismicio/svelte/kit";
 	import { page } from "$app/stores";
 	import { browser } from "$app/environment";
@@ -154,7 +155,7 @@
 				aria-label="Close menu"
 			>
 				<div in:fade={{ delay: 1200 }} out:fade class="text-white">
-					<i class="fa-sharp fa-thin fa-close fa-3x"></i>
+					<X size={48} strokeWidth={1} />
 				</div>
 			</button>
 		</ContentWidth>
@@ -177,7 +178,7 @@
 				</div>
 			{:else}
 				<button onclick={() => (isOverlayVisible = true)} aria-label="Open menu">
-					<i class="text-[#998B6A] md:hidden fa-sharp fa-bars fa-3x"></i>
+					<Menu class="text-[#998B6A] md:hidden" size={48} strokeWidth={1.5} />
 				</button>
 			{/if}
 		</ContentWidth>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { swipe } from "svelte-gestures";
+	import { createSwipeAction } from "$utils/swipeAction";
 	import placeholder from "../../assets/images/background_placeholder.svg";
 	import ContentWidth from "../ContentWidth/ContentWidth.svelte";
 	import FourByThreeImage from "../FullWidth/FourByThreeImage.svelte";
@@ -30,12 +30,10 @@
 		sliderIndex--;
 	};
 
-	const handleSwipe = (
-		e: CustomEvent<{ direction: "left" | "top" | "right" | "bottom"; target: EventTarget }>
-	) => {
+	const swipe = createSwipeAction((e) => {
 		if (e.detail.direction === "left") slideRight();
 		if (e.detail.direction === "right") slideLeft();
-	};
+	});
 
 	const tripledImages = $derived(imageArray.concat(imageArray).concat(imageArray));
 </script>
@@ -43,7 +41,7 @@
 <svelte:window bind:innerWidth={viewportWidth} />
 
 <section class="pb-32 {klass}">
-	<div use:swipe onswipe={handleSwipe} class="h-[320px] py-2 relative">
+	<div use:swipe class="h-[320px] py-2 relative">
 		<div
 			class="overflow-hidden w-screen mt-20 lg:mt-0"
 			style="margin-left:{viewportWidth > 1340 ? viewportWidth - 1220 / 2 : viewportWidth * 0.04};"
