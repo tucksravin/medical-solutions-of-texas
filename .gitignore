@@ -1,1 +1,8 @@
 node_modules
+.svelte-kit
+build
+.netlify
+.vercel
+.output
+.DS_Store
+.claude
