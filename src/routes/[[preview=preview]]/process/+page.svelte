@@ -12,10 +12,10 @@
     import timeline_mobile from "$lib/assets/images/process/timeline_mobile.svg"
   import Footer from "$lib/components/Footer.svelte";
 
-    let viewportHeight:number = $state();
-    let viewportWidth:number = $state();
+    let viewportHeight: number = $state(typeof window !== "undefined" ? window.innerHeight : 1080);
+    let viewportWidth: number = $state(typeof window !== "undefined" ? window.innerWidth : 1920);
 
-    let threeStepTrigger:HTMLElement | null = $state();
+    let threeStepTrigger: HTMLElement | undefined = $state();
     let isthreeStepActive = $state(false);
 
     const handleScroll = () => {

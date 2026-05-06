@@ -6,26 +6,22 @@
     import { onMount } from "svelte";
 
 
-let viewportWidth:number = $state();
-let viewportHeight:number = $state();
+let viewportWidth: number = $state(typeof window !== "undefined" ? window.innerWidth : 1920);
+let viewportHeight: number = $state(typeof window !== "undefined" ? window.innerHeight : 1080);
 
-let ctaTrigger:HTMLElement | null = $state();
+let ctaTrigger: HTMLElement | undefined = $state();
 let isCtaActive = $state(false);
 
 const handleScroll = () => {
-    if(ctaTrigger){
-            const ctaBottom =ctaTrigger.getBoundingClientRect().bottom
-
-            if(ctaBottom<viewportHeight){
-                isCtaActive=true;
-            }else{
-                isCtaActive=false;
-            }
-        }
+	if (ctaTrigger) {
+		const ctaBottom = ctaTrigger.getBoundingClientRect().bottom;
+		isCtaActive = ctaBottom < viewportHeight;
+	}
 };
-		
+
 onMount(() => {
-	window.addEventListener('scroll', handleScroll);
+	window.addEventListener("scroll", handleScroll);
+	return () => window.removeEventListener("scroll", handleScroll);
 });
 
 </script>

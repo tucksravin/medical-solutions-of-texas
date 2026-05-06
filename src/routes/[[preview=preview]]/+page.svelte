@@ -30,8 +30,8 @@ import ctaImageMobile from "$lib/assets/images/home/doctor_mobile.jpg"
   
 
 
-let viewportWidth:number = $state();
-let viewportHeight:number = $state();
+let viewportWidth: number = $state(typeof window !== "undefined" ? window.innerWidth : 1920);
+let viewportHeight: number = $state(typeof window !== "undefined" ? window.innerHeight : 1080);
 
 let isMounted = $state(false);
 let showIntro = true;
@@ -40,7 +40,7 @@ let showSubtitle = $state(false);
 
 let weGetIndex = $state(0);
 
-let weGetTrigger:HTMLElement | null = $state();
+let weGetTrigger: HTMLElement | undefined = $state();
 
 let weGetRunning = false;
 
@@ -63,13 +63,13 @@ const runReverseWeGetAnimation = () => {
 	}
 }
 
-let painTrigger:HTMLElement | null = $state();
+let painTrigger: HTMLElement | undefined = $state();
 let isPainActive = $state(false);
 
-let threeStepTrigger:HTMLElement | null = $state();
+let threeStepTrigger: HTMLElement | undefined = $state();
 let isthreeStepActive = $state(false);
 
-let ctaTrigger:HTMLElement | null = $state();
+let ctaTrigger: HTMLElement | undefined = $state();
 let isCtaActive = $state(false);
 
 

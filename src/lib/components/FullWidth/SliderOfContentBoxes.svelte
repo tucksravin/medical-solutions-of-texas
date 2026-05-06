@@ -8,7 +8,7 @@
   
 
   interface Props {
-    contentBoxPropsArray?: ComponentProps<ContentBox>[];
+    contentBoxPropsArray?: ComponentProps<typeof ContentBox>[];
     isNumbered?: boolean;
   }
 
