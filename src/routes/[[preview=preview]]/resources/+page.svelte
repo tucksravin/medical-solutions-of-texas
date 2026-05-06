@@ -38,7 +38,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
                     <h4 class="text-dark hover:opacity-90 transition-opacity">FSS Catalog (Contract # 36F79725D0204)</h4>
                 </a>
                 <a href="/pdfs/MSOT_FSSCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
-                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
+                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"></i>
                 </a>
             </div>
             <div class="text-dark w-full border-t-2 border-dark flex flex-row justify-between items-center py-5">
@@ -46,7 +46,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
                     <h4 class="text-dark hover:opacity-90 transition-opacity">Commercial Catalog</h4>
                 </a>
                 <a href="/pdfs/MSOT_CommercialCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
-                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
+                    <i class="text-dark opacity-40 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"></i>
                 </a>
             </div>
             
@@ -59,7 +59,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
                     <h4 class=" hover:opacity-90 transition-opacity">Catalog</h4>
                 </a>
                 <a href="/pdfs/MSOT_CommercialCatalog.pdf" class="negative-bump" target="_blank" rel="noopener noreferrer">
-                    <i class=" opacity-0 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
+                    <i class=" opacity-0 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"></i>
                 </a>
             </div>
             
@@ -72,7 +72,7 @@ import ContentWidth from "$lib/components/ContentWidth/ContentWidth.svelte";
                     <h4 class=" hover:opacity-90 transition-opacity">Technique Guide</h4>
                 </a>
                 <a href="/" class="negative-bump" target="_blank" rel="noopener noreferrer">
-                    <i class=" opacity-0 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"/>
+                    <i class=" opacity-0 fa-sharp fa-light fa-download fa-xl hover:opacity-90 transition-opacity"></i>
                 </a>
             </div>
             

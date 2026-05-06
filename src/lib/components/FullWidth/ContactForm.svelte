@@ -1,13 +1,15 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
     import StyledSingleSelect from "./StyledSingleSelect.svelte";
     import DefaultButton from "../Buttons/DefaultButton.svelte";
   import BracketButton from "../Buttons/BracketButton.svelte";
 
 
-    export let PRODUCTS = ["VA Contracts", "DoD Contracts", "Both"]
+  let { PRODUCTS = ["VA Contracts", "DoD Contracts", "Both"] } = $props();
 
     let submit = () => form.submit();
-    let form:HTMLFormElement;
+    let form:HTMLFormElement = $state();
 
     type SelectOption = {
   index?: number;
@@ -16,16 +18,16 @@
 };
 
 
-    let selectValue:SelectOption = {
+    let selectValue:SelectOption = $state({
         index: 0,
         value: "Select Interest",
         label: "Select Interest"
-    };
+    });
 
-    $: {
+    run(() => {
         selectValue;
         console.log(selectValue)
-    }
+    });
 
 </script>
 
@@ -42,7 +44,7 @@
         <StyledSingleSelect placeholder="Select Interest" items={PRODUCTS} bind:value={selectValue}/>
         <input name="select" type="text" bind:value={selectValue.value} hidden />
 
-        <textarea class="border-[1px] rounded-[3px] text-dark border-light h-48 pl-4 pt-2" placeholder="Your Message" name="message" />
+        <textarea class="border-[1px] rounded-[3px] text-dark border-light h-48 pl-4 pt-2" placeholder="Your Message" name="message"></textarea>
 
         <div class="w-16">
             <BracketButton click={submit} class="text-dark">Submit</BracketButton>

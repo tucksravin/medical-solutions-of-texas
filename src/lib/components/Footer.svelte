@@ -6,11 +6,11 @@
     import { onMount } from "svelte";
 
 
-let viewportWidth:number;
-let viewportHeight:number;
+let viewportWidth:number = $state();
+let viewportHeight:number = $state();
 
-let ctaTrigger:HTMLElement | null;
-let isCtaActive = false;
+let ctaTrigger:HTMLElement | null = $state();
+let isCtaActive = $state(false);
 
 const handleScroll = () => {
     if(ctaTrigger){

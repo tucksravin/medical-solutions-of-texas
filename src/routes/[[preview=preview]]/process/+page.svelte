@@ -12,11 +12,11 @@
     import timeline_mobile from "$lib/assets/images/process/timeline_mobile.svg"
   import Footer from "$lib/components/Footer.svelte";
 
-    let viewportHeight:number;
-    let viewportWidth:number;
+    let viewportHeight:number = $state();
+    let viewportWidth:number = $state();
 
-    let threeStepTrigger:HTMLElement | null;
-    let isthreeStepActive = false;
+    let threeStepTrigger:HTMLElement | null = $state();
+    let isthreeStepActive = $state(false);
 
     const handleScroll = () => {
 
@@ -45,8 +45,8 @@
 
 
 <ScreenWidthImage class="fixed -z-10" src={hero}  darken backdrop />
-<div class="w-screen h-[20vh] fixed left-0 top-0 -z-10 bg-gradient-to-b from-[#140F09] via-[#140F09] to-transparent opacity-55" />
-<div class="w-screen h-screen fixed left-0 top-0 -z-10 bg-[#140F09] opacity-45" />
+<div class="w-screen h-[20vh] fixed left-0 top-0 -z-10 bg-gradient-to-b from-[#140F09] via-[#140F09] to-transparent opacity-55"></div>
+<div class="w-screen h-screen fixed left-0 top-0 -z-10 bg-[#140F09] opacity-45"></div>
 
 <div class="w-full h-screen">
     <ContentWidth class="h-full flex flex-row justify-between items-center py-32 relative">
@@ -58,8 +58,8 @@
 <ContentWidth>
 	<div class="w-full flex justify-center items-center mt-52 mb-40" >
 		<div class="w-full p-8 lg:py-48 border-mid border-b-[6px] border-x-[6px] relative flex flex-col items-center justify-center gap-8 mb-12">
-			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
-			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]" />
+			<div class="absolute top-0 left-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]"></div>
+			<div class="absolute top-0 right-0 w-6 sm:w-1/6 md:w-1/4 lg:w-1/3 h-0 border-mid border-t-[6px]"></div>
 			<h4 class="text-mid absolute top-0 left-1/2 text-nowrap" style="transform:translate(-50%, calc(-50% + 3px))">Simplifying Complexity</h4>
             <p class="text-white text-center mt-12">Government Contracting is Complex...</p>
 
@@ -94,23 +94,23 @@
 					frameborder="0"
 					
 				  ></iframe>
-				  <div class="w-full h-full absolute top-0 left-0 bg-darken-gradient"/>
-				  <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"/> 
+				  <div class="w-full h-full absolute top-0 left-0 bg-darken-gradient"></div>
+				  <div class="w-full h-full absolute top-0 left-0 bg-mid mix-blend-multiply"></div> 
 				  <h2 class="text-mid absolute -bottom-2 md:-bottom-[14px] left-0 leading-none">OUR PROCESS</h2>
 		</div>
         <div bind:this={threeStepTrigger} class="w-full my-24 flex flex-col md:flex-row justify-between gap-8">
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100":"opacity-0"}">
-				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full" />
+				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full"></div>
 				<h5 class="text-dark mt-4"><span class="text-[#998B6A]">01</span> Refine</h5>
 				<div class="text-dark mt-8 text-[24px] leading-normal">We’ll isolate the best contracts and options for your company</div>
 			</div>
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100 delay-[800ms]":"opacity-0"}">
-				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full" />
+				<div class="absolute top-0 left-0 h-[2px] bg-dark  w-full"></div>
 				<h5 class="text-dark mt-4"><span class="text-[#998B6A]">02</span> Guide</h5>
 				<div class="text-dark mt-8 text-[24px] leading-normal">We’ll guide you through the bureaucracy and paperwork, and get your application in</div>
 			</div>
 			<div class="w-full relative transition-opacity duration-1000 ease-out {isthreeStepActive?"bg-opacity-100 delay-[1800ms]":"opacity-0"}">
-				<div class="absolute top-0 left-0 h-[2px] bg-dark w-full" />
+				<div class="absolute top-0 left-0 h-[2px] bg-dark w-full"></div>
 				<h5 class="text-dark mt-4"><span class="text-[#998B6A]">03</span> Connect</h5>
 				<div class="text-dark mt-8 text-[24px] leading-normal">We’ll get you in the room with the right people to help you build further relationship</div>
 

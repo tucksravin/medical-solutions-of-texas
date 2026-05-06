@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { browser } from '$app/environment';
@@ -12,9 +14,14 @@
 	import { onMount } from 'svelte';
 	import OnMount from '$lib/components/TriggerTransitionOnMount.svelte';
 	import { onNavigate } from '$app/navigation';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-  let isOverlayVisible = false;
-  let viewportWidth:number;
+	let { children }: Props = $props();
+
+  let isOverlayVisible = $state(false);
+  let viewportWidth:number = $state();
 
   const NAV_LINKS=[
         {
@@ -40,8 +47,8 @@
 
     ];
 
-	let main:HTMLElement | null;
-	let showNav = true;
+	let main:HTMLElement | null = $state();
+	let showNav = $state(true);
 
 	let lastScrollY = 0;
 
@@ -58,8 +65,8 @@
 	}
 
 
-  let isReady = false;
-  let isTransitioning = false;
+  let isReady = $state(false);
+  let isTransitioning = $state(false);
 
   function disableScroll() {
         if (browser) 
@@ -74,11 +81,13 @@
         }
     };
 
-    $: if (!isReady||isTransitioning) {
-        disableScroll();
-    } else {
-        enableScroll();
-    }
+    run(() => {
+		if (!isReady||isTransitioning) {
+	        disableScroll();
+	    } else {
+	        enableScroll();
+	    }
+	});
 
 
   onMount(()=>{
@@ -148,12 +157,12 @@
 <div class="w-screen h-screen fixed bg-dark z-30" transition:fly={{y:"-100%"}}>
 	<ContentWidth class="flex flex-col items-center justify-center gap-12 h-full">
     {#each NAV_LINKS as item}
-        <a on:click={()=>isOverlayVisible=false} href={item.href} class="text-light text-2xl">{item.label}</a>
+        <a onclick={()=>isOverlayVisible=false} href={item.href} class="text-light text-2xl">{item.label}</a>
     {/each}
 
-    <button class="absolute top-5 right-5 opacity-60 hover:opacity-100 transition-all z-40" on:click={()=>isOverlayVisible=false}>
+    <button class="absolute top-5 right-5 opacity-60 hover:opacity-100 transition-all z-40" onclick={()=>isOverlayVisible=false}>
         <div in:fade={{delay: 1200}} out:fade class="text-white">
-        <i class="fa-sharp fa-thin fa-close fa-3x" />
+        <i class="fa-sharp fa-thin fa-close fa-3x"></i>
         </div>
       
     </button>
@@ -164,7 +173,7 @@
 <main bind:this={main} >
 	<nav class="nav-text fixed top-0 w-full h-28 py-4 z-20 transition duration-300 ease-in {showNav?"":"-translate-y-full"}">
 		<ContentWidth class="h-full flex flex-row justify-between items-center">
-		<div/>
+		<div></div>
 			{#if viewportWidth>768}
 			<div class="flex flex-row items-center justify-between gap-12 transition-transform ">
 				{#each NAV_LINKS as item}
@@ -172,12 +181,12 @@
 				{/each}
 			</div>
 			{:else}
-				<button on:click={()=>isOverlayVisible=true}><i class="text-[#998B6A] md:hidden fa-sharp fa-bars fa-3x"/></button>
+				<button onclick={()=>isOverlayVisible=true}><i class="text-[#998B6A] md:hidden fa-sharp fa-bars fa-3x"></i></button>
 			{/if}
 		</ContentWidth>
 	</nav>
 
-	<slot />
+	{@render children?.()}
 
 
 </main>
