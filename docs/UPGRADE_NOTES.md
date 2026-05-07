@@ -1,6 +1,6 @@
 # Svelte 5 / Vite 8 / Tailwind 4 Upgrade Notes
 
-Migrated from Svelte 4.2.8 / Vite 5.0.9 / SvelteKit 2.0.0 / Tailwind 3.4.1 / npm to the [reddoor-starter](https://github.com/tuckerlemos/reddoor-starter) reference stack on the `svelte-5` branch in May 2026.
+Migrated from Svelte 4.2.8 / Vite 5.0.9 / SvelteKit 2.0.0 / Tailwind 3.4.1 / npm to the `reddoor-starter` reference stack on the `svelte-5` branch in May 2026.
 
 ## Final stack
 
@@ -24,13 +24,13 @@ Migrated from Svelte 4.2.8 / Vite 5.0.9 / SvelteKit 2.0.0 / Tailwind 3.4.1 / npm
 | Package manager | npm | **pnpm 10.33.1** |
 | Node | unspecified | pinned `22.12.0` in `netlify.toml` |
 
-Total bundle: 468 KB → 440 KB (~6% smaller, after Lucide icons replaced the FA Kit CDN fetch).
+Total bundle: 468 KB → 440 KB (~6% smaller). Tailwind 4 + Svelte 5 codegen saved ~40 KB; Lucide icons added back ~12 KB inline. Separately, dropping the FA Kit CDN `<script>` removes a ~70 KB external fetch on first page load — not visible in bundle size, but a real cold-start win.
 
 `pnpm check`: 0 errors, ~24 warnings (all pre-existing a11y/markup quality nits — not introduced by the migration).
 
 ## Commit-by-commit
 
-The branch was structured for safe revert; each commit leaves the project in a verifiably runnable state.
+The branch was structured for safe revert. Each commit boots cleanly (`pnpm dev` → HTTP 200) even when rendering is partially broken between commits — full visual correctness is the final commit's job.
 
 1. **bump deps** — package.json rewrite, pnpm switch, explicit adapter-netlify, ESLint flat config, `tsconfig.json` (replaces `jsconfig.json`), `vite.config.ts` with `@tailwindcss/vite` + `imagetools`, `netlify.toml` corepack envs, FA CDN kept temporarily.
 2. **tailwind update** — `src/app.css` rewritten to `@import "tailwindcss"` + `@theme {}` + `@source inline()` for safelist replacement + `@utility bump/negative-bump`. Deleted `tailwind.config.js` and `postcss.config.js`. Fixed pre-existing tailwind config bugs (the `light:' #E1DDCB;'` typo, 5× duplicated screen-heights).
@@ -70,7 +70,7 @@ The branch was structured for safe revert; each commit leaves the project in a v
 ### Svelte 5 idioms
 
 11. **`ComponentProps<X>` requires `typeof`** in Svelte 5: `ComponentProps<typeof TestimonialBox>[]`, not `ComponentProps<TestimonialBox>[]`. Svelte 5 components are functions, not classes.
-12. **Mixed event handler syntax** error — Svelte 5 forbids `on:swipe={x}` and `onclick={y}` on the same element. When migrating sliders that still use a Svelte 4 action's named-event listener, either fully migrate the action or use `onswipe={x}` (passing the same handler with the new attribute name).
+12. **Mixed event handler syntax** error — Svelte 5's compiler refuses to mix `on:swipe={x}` and `onclick={y}` within a single component. When migrating sliders that still use a Svelte 4 action's named-event listener, either fully migrate the action or rename `on:swipe` → `onswipe` (same handler, new attribute syntax).
 13. **Slot fallback content** (`<slot>{text}</slot>` rendering `text` if no children passed) is **not** preserved by the codemod — it just becomes `{@render children?.()}`. Restore the fallback manually:
     ```svelte
     {#if children}{@render children()}{:else}{text}{/if}
@@ -104,7 +104,7 @@ The branch was structured for safe revert; each commit leaves the project in a v
 
 ## Pointers
 
-- **Canonical reference**: [`reddoor-starter`](https://github.com/tuckerlemos/reddoor-starter) is the source of truth for any Reddoor SvelteKit/Prismic site going forward. When in doubt, match its file shapes (svelte.config.js, vite.config.ts, eslint.config.js, app.css `@theme` block, `$lib` aliases, store factory pattern in `*.svelte.ts`, prop typing convention).
+- **Canonical reference**: `reddoor-starter` (at `~/Documents/GitHub/reddoor-starter/`) is the source of truth for any Reddoor SvelteKit/Prismic site going forward. When in doubt, match its file shapes (`svelte.config.js`, `vite.config.ts`, `eslint.config.js`, `app.css` `@theme` block, `$lib` aliases, store factory pattern in `*.svelte.ts`, prop typing convention).
 - **Plan file used for this upgrade**: `/Users/tuckerlemos/.claude/plans/look-at-my-reddoor-dazzling-map.md` — kept for posterity.
 - **Cross-project upgrade recipe**: lives in two places, kept in sync:
   - `~/Documents/GitHub/reddoor-starter/docs/upgrading-from-svelte-4.md` — human-readable reference, committed to the starter.
