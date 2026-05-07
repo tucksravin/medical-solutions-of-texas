@@ -8,6 +8,6 @@ import { useSwipe, type SwipeCustomEvent } from "svelte-gestures";
  *   <div use:swipe>...</div>
  */
 export const createSwipeAction = (handler: (e: SwipeCustomEvent) => void) => {
-	const gesture = useSwipe(handler, undefined, undefined, true);
-	return (node: HTMLElement) => ({ destroy: gesture.swipe(node) });
+  const gesture = useSwipe(handler, undefined, undefined, true);
+  return (node: HTMLElement) => ({ destroy: gesture.swipe(node) });
 };

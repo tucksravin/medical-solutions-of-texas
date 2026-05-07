@@ -1,18 +1,18 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
+  import { onMount } from "svelte";
+  interface Props {
+    children?: import("svelte").Snippet;
+  }
 
-	let { children }: Props = $props();
+  let { children }: Props = $props();
 
-	let isMounted = $state(false)
+  let isMounted = $state(false);
 
-	onMount(() => {
-		isMounted = true
-	})
+  onMount(() => {
+    isMounted = true;
+  });
 </script>
 
 {#if isMounted}
-	{@render children?.()}
+  {@render children?.()}
 {/if}
