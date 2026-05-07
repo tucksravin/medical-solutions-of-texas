@@ -8,7 +8,7 @@
 
   //images
   import soldiersVideoPlaceholder from "$lib/assets/images/home/bgVideoPlaceholder.jpg";
-  import surgeonsVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.png";
+  import surgeonsVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.jpg";
   import timeline1 from "$lib/assets/images/home/timeline1.svg";
   import timeline1_mobile from "$lib/assets/images/home/timeline1_mobile.svg";
   import timeline2 from "$lib/assets/images/home/timeline2.svg";

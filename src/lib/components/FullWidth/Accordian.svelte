@@ -27,7 +27,7 @@
 <div class="w-full flex flex-col border-dark border-b-2 cursor-pointer">
   {#each accordianProps as accordian, i}
     <button
-      class="w-full border-t-2 border-dark cursor-pointer flex flex-col xl:flex-row relative"
+      class="w-full border-t-2 border-dark cursor-pointer flex flex-col xl:flex-row"
       onclick={() => (activeAccordians[i] = !activeAccordians[i])}
     >
       <div
@@ -36,6 +36,15 @@
         <h4 class="text-left text-dark pr-12 md:pr-0 md:text-nowrap">
           {accordian.label}
         </h4>
+        <Plus
+          class="text-dark transition-transform duration-300 ease-in-out opacity-80 hover:opacity-100 origin-center shrink-0 {activeAccordians[
+            i
+          ]
+            ? 'rotate-45'
+            : ''}"
+          size={36}
+          strokeWidth={1}
+        />
       </div>
       {#if activeAccordians[i]}
         <div class="pr-16 w-full" transition:slide={{ duration: 500 }}>
@@ -51,15 +60,6 @@
           </p>
         </div>
       {/if}
-      <Plus
-        class="absolute right-8 top-10 text-dark transition-transform duration-300 ease-in-out opacity-80 hover:opacity-100 origin-center {activeAccordians[
-          i
-        ]
-          ? 'rotate-45'
-          : ''}"
-        size={36}
-        strokeWidth={1}
-      />
     </button>
   {/each}
 </div>
