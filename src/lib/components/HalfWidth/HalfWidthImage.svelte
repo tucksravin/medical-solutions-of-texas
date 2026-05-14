@@ -6,13 +6,15 @@
     class?: string;
   }
 
-  let { image = placeholder, class: klass = "" }: Props = $props();
+  let { image = placeholder, class: passedClasses = "" }: Props = $props();
 
   const rotationAngle = "36.8";
   const crossLength = "125%";
+
+  const baseClasses = "w-full lg:w-1/2 my-8";
 </script>
 
-<div class="w-full lg:w-1/2 my-8 {klass}">
+<div class="{baseClasses} {passedClasses}">
   <div
     class="w-full aspect-[4/3] {image === placeholder
       ? 'border-light border-2 bg-light bg-opacity-25'

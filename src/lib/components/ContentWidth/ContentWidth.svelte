@@ -8,25 +8,21 @@
     children?: Snippet;
   }
 
-  let { animateIn = false, class: klass = "", children }: Props = $props();
+  let { animateIn = false, class: passedClasses = "", children }: Props = $props();
 
-  const innerClass = $derived(
-    klass || "flex flex-col items-center justify-center relative",
-  );
+  const baseClasses =
+    "max-w-[1220px] xl:max-w-[1440px] xl:mx-auto mx-[4%] w-[92%]";
+  const defaultLayouts = "flex flex-col items-center justify-center relative";
 </script>
 
 {#if animateIn}
   <AnimateIn>
-    <div
-      class="max-w-[1220px] xl:max-w-[1440px] xl:mx-auto mx-[4%] w-[92%] {innerClass}"
-    >
+    <div class="{baseClasses} {passedClasses || defaultLayouts}">
       {@render children?.()}
     </div>
   </AnimateIn>
 {:else}
-  <div
-    class="max-w-[1220px] xl:max-w-[1440px] xl:mx-auto mx-[4%] w-[92%] {innerClass}"
-  >
+  <div class="{baseClasses} {passedClasses || defaultLayouts}">
     {@render children?.()}
   </div>
 {/if}

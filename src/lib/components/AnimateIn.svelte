@@ -14,7 +14,7 @@
     style = "",
     transitionDelayMax = 400,
     transitionDuration = 2400,
-    class: klass = "",
+    class: passedClasses = "",
     children,
   }: Props = $props();
 
@@ -49,13 +49,15 @@
       if (checking) clearInterval(checking);
     }
   });
+
+  const baseClasses = "transition ease-fast-slow";
 </script>
 
 <div
   bind:this={el}
-  class="transition ease-fast-slow {isInView
+  class="{baseClasses} {isInView
     ? 'opacity-100 translate-y-0'
-    : 'opacity-0 translate-y-[50%]'} {klass}"
+    : 'opacity-0 translate-y-[50%]'} {passedClasses}"
   style="transition-delay:{transitionDelay}ms; transition-duration:{transitionDuration}ms; {style}"
 >
   {@render children?.()}

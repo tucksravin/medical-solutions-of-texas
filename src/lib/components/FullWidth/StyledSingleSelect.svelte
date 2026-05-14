@@ -19,14 +19,17 @@
     items,
     value = $bindable(),
     placeholder,
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   let selectHover = $state(false);
+
+  const baseClasses =
+    "w-full mx-auto cursor-pointer relative border-light bg-opacity-10";
 </script>
 
 <div
-  class="w-full mx-auto cursor-pointer relative border-light bg-opacity-10 {klass}"
+  class="{baseClasses} {passedClasses}"
   role="separator"
   onmouseover={() => (selectHover = true)}
   onfocus={() => (selectHover = true)}

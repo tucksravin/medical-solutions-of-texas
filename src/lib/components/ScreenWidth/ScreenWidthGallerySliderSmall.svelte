@@ -14,7 +14,7 @@
   let {
     imageArray = [placeholder, placeholder, placeholder, placeholder],
     altText = "background image",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const SLIDER_TRANSITION_LENGTH_IN_MS = 2000;
@@ -72,9 +72,11 @@
   const tripledImages = $derived(
     imageArray.concat(imageArray).concat(imageArray),
   );
+
+  const baseClasses = "pb-32";
 </script>
 
-<section class="pb-32 {klass}">
+<section class="{baseClasses} {passedClasses}">
   <div use:swipe class="h-[320px] py-2 relative">
     <div
       class="h-full flex flex-row flex-nowrap {isSlideAnimated

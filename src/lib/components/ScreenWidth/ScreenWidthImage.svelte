@@ -21,12 +21,14 @@
     vimeoId = "",
     darken = false,
     backdrop = false,
-    class: klass = "",
+    class: passedClasses = "",
     children,
   }: Props = $props();
 
   let viewportHeight: number = $state(0);
   let viewportWidth: number = $state(0);
+
+  const defaultLayouts = "flex items-center justify-center";
 </script>
 
 <svelte:window
@@ -78,7 +80,7 @@
       class="w-screen h-screen absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
     >
       <ContentWidth
-        class="{klass || 'flex items-center justify-center'} h-full"
+        class="{passedClasses || defaultLayouts} h-full"
       >
         {@render children?.()}
       </ContentWidth>

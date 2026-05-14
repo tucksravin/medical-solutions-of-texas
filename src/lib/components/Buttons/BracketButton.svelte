@@ -11,11 +11,14 @@
   let {
     click = () => {},
     href = "",
-    class: klass = "",
+    class: passedClasses = "",
     children,
   }: Props = $props();
 
   let isActive = $state(false);
+
+  const baseClasses =
+    "flex flex-row items-center text-center no-underline justify-center transition-all duration-300 active:-translate-y-2 hover:text-dark";
 </script>
 
 {#if href}
@@ -26,7 +29,7 @@
       click();
       isActive = false;
     }}
-    class="flex flex-row items-center text-center no-underline justify-center transition-all duration-300 active:-translate-y-2 {klass}"
+    class="{baseClasses} {passedClasses}"
     {href}
   >
     <div
@@ -55,7 +58,7 @@
       click();
       isActive = false;
     }}
-    class="flex flex-row items-center text-center no-underline justify-center transition-all duration-300 active:-translate-y-2 {klass}"
+    class="{baseClasses} {passedClasses}"
   >
     <div
       class="transition-transform duration-300 text-xl {isActive
@@ -78,7 +81,5 @@
 {/if}
 
 <style>
-  a:hover {
-    color: rgb(83 68 34 / var(--tw-text-opacity));
-  }
+
 </style>

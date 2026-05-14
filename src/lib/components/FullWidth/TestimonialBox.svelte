@@ -18,7 +18,7 @@
     attributionLabel = "",
     backgroundColor = "transparent",
     float = "center",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const justify = $derived(
@@ -32,10 +32,12 @@
         ? "ml-auto mr-0"
         : "mx-auto",
   );
+
+  const baseClasses = "w-full flex flex-col p-2 sm:p-8";
 </script>
 
 <div
-  class="{klass} w-full flex flex-col p-2 sm:p-8 justify-{justify} text-{float}"
+  class="{baseClasses} justify-{justify} text-{float} {passedClasses}"
   style="background-color: {backgroundColor}"
 >
   {#if icon}

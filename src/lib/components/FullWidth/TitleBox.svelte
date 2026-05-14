@@ -30,7 +30,7 @@
     linkHref = "",
     backgroundColor = "transparent",
     float = "center",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const justify = $derived(
@@ -44,10 +44,12 @@
         ? "ml-auto mr-0"
         : "mx-auto",
   );
+
+  const baseClasses = "w-full flex flex-col p-2 md:p-8";
 </script>
 
 <div
-  class="w-full flex flex-col p-2 md:p-8 justify-{justify} text-{float} {klass}"
+  class="{baseClasses} justify-{justify} text-{float} {passedClasses}"
   style="background-color: {backgroundColor}"
 >
   {#if icon}

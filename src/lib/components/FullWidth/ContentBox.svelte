@@ -32,7 +32,7 @@
     linkHref = "",
     backgroundColor = "transparent",
     float = "center",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const justify = $derived(
@@ -50,10 +50,12 @@
   const resolvedIcon = $derived(
     icon === "placeholder" ? placeholderIcon : icon,
   );
+
+  const baseClasses = "w-full flex flex-col p-2 sm:p-8";
 </script>
 
 <div
-  class="w-full flex flex-col p-2 sm:p-8 justify-{justify} text-{float} {klass}"
+  class="{baseClasses} justify-{justify} text-{float} {passedClasses}"
   style="background-color: {backgroundColor}"
 >
   {#if resolvedIcon}

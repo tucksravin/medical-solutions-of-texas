@@ -15,7 +15,7 @@
   let {
     imageArray = [placeholder, placeholder, placeholder, placeholder],
     altText = "background image",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   let viewportWidth: number = $state(
@@ -40,11 +40,13 @@
   const tripledImages = $derived(
     imageArray.concat(imageArray).concat(imageArray),
   );
+
+  const baseClasses = "pb-32";
 </script>
 
 <svelte:window bind:innerWidth={viewportWidth} />
 
-<section class="pb-32 {klass}">
+<section class="{baseClasses} {passedClasses}">
   <div use:swipe class="h-[320px] py-2 relative">
     <div
       class="overflow-hidden w-screen mt-20 lg:mt-0"

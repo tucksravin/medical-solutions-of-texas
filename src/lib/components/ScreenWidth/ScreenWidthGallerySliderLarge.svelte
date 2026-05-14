@@ -37,7 +37,7 @@
         filters: ["UI", "UX"],
       },
     ],
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const SLIDER_TRANSITION_LENGTH_IN_MS = 2000;
@@ -106,12 +106,14 @@
   });
 
   const tripledItems = $derived(itemArray.concat(itemArray).concat(itemArray));
+
+  const baseClasses = "pb-32";
 </script>
 
 <svelte:head><title>Portfolios | Reddoor Wireframer</title></svelte:head>
 <svelte:window bind:innerWidth />
 
-<section class="pb-32 {klass}">
+<section class="{baseClasses} {passedClasses}">
   <div use:swipe class="h-py-2 relative" style="height:{imageWidth * 0.95}px;">
     <div
       class="h-full flex flex-row flex-nowrap {isSlideAnimated

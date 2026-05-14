@@ -10,14 +10,16 @@
   let {
     src = placeholder,
     alt = "placeholder",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const rotationAngle = "45";
   const crossLength = "141%";
+
+  const baseClasses = "w-full my-8";
 </script>
 
-<div class="w-full my-8 {klass}">
+<div class="{baseClasses} {passedClasses}">
   <div
     class="w-full aspect-square {src === placeholder
       ? 'border-light border-2 bg-light bg-opacity-25'

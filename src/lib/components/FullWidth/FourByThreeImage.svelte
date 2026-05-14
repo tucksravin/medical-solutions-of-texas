@@ -12,14 +12,16 @@
     src = placeholder,
     alt = "placeholder",
     label = "",
-    class: klass = "",
+    class: passedClasses = "",
   }: Props = $props();
 
   const rotationAngle = "36.8";
   const crossLength = "125%";
+
+  const baseClasses = "w-full my-8 relative";
 </script>
 
-<div class="w-full my-8 relative {klass}">
+<div class="{baseClasses} {passedClasses}">
   <div
     class="w-full aspect-[4/3] {src === placeholder
       ? 'border-light border-2 bg-light bg-opacity-25'
