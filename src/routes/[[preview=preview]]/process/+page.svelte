@@ -6,7 +6,7 @@
   import { onMount } from "svelte";
 
   import hero from "$lib/assets/images/process/processHero.jpg";
-  import surgeonVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.png";
+  import surgeonVideoPlaceholder from "$lib/assets/images/home/surgeonsPlaceholder.jpg";
   import timeline from "$lib/assets/images/process/timeline.svg";
   import timeline_mobile from "$lib/assets/images/process/timeline_mobile.svg";
   import Footer from "$lib/components/Footer.svelte";
